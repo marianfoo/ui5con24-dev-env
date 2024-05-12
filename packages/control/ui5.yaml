@@ -1,0 +1,9 @@
+specVersion: "2.2"
+type: module
+metadata:
+  name: ui5-cc-ui5con24.cc
+
+resources:
+  configuration:
+    paths:
+      "/resources/ui5con24/cc/": "./"

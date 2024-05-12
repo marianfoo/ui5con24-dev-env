@@ -1,0 +1,27 @@
+{
+  "name": "ui5-cc-ui5con24.cc",
+  "version": "0.0.1",
+  "description": "(add custom control description here)",
+  "scripts": {
+    "test": "jest",
+    "test:manual": "cd test/ui5-app && ui5 serve"
+  },
+  "keywords": [
+    "ui5",
+    "custom control",
+    "notepad control"
+  ],
+  "author": "(you)",
+  "repository": {
+    "type": "git",
+    "url": "you/ui5-cc-ui5con24.cc.git"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@ui5/cli": "^2.10.2",
+    "jest": "^26.6.3",
+    "jest-puppeteer": "^4.4.0",
+    "npm-run-all": "^4.1.5",
+    "puppeteer": "^7.0.4"
+  }
+}
