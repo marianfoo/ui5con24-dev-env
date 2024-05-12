@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<library xmlns="http://www.sap.com/sap.ui.library.xsd">
+	<name>ui5con24.lib</name>
+	<vendor>„marianfoo“</vendor>
+	<version>${version}</version>
+	<copyright>${copyright}</copyright>
+	<title>ui5con24.lib</title>
+	<documentation>Some description about ui5con24.lib</documentation>
+	<dependencies>
+		<dependency>
+			<libraryName>sap.ui.core</libraryName>
+		</dependency>
+	</dependencies>
+</library>
