@@ -9,9 +9,15 @@ framework:
     - name: sap.ui.core
     - name: themelib_sap_horizon
     - name: themelib_sap_fiori_3
+builder:
+  customTasks:
+    - name: ui5-tooling-transpile-task
+      afterTask: replaceVersion
+      configuration:
+        generateTsInterfaces: true # always generate the TS interfaces in build
 server:
   customMiddleware:
-    - name: "@ui5/middleware-code-coverage"
+    - name: ui5-tooling-transpile-middleware
       afterMiddleware: compression
     - name: ui5-middleware-livereload
       afterMiddleware: compression

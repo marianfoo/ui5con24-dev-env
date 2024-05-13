@@ -1,12 +1,10 @@
 module.exports = function (config) {
-	"use strict";
-
 	require("./karma-ci.conf")(config);
 	config.set({
 		reporters: ["progress", "coverage"],
 		preprocessors: {
-			"src/**/*.js": ["coverage"],
-			"test/**/*.js": ["coverage"]
+			"src/**/*.ts": ["ui5-transpile"],
+			"test/**/*.ts": ["ui5-transpile"]
 		},
 		proxies: {
 			'/resources/ui5con24/lib/': '/base/src/',

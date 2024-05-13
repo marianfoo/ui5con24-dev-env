@@ -1,13 +1,18 @@
 {
-  "generator-ui5-library": {
+  "generator-ui5-ts-library": {
     "namespace": "ui5con24.lib",
     "framework": "SAPUI5",
     "frameworkVersion": "1.120.13",
     "flat": true,
     "author": "„marianfoo“",
     "initrepo": false,
+    "tstypes": "@sapui5/types",
+    "tstypesVersion": "1.120.13",
+    "metadataOptionsImportLine": "import type { MetadataOptions } from \"sap/ui/core/Element\";\n",
+    "metadataOptionsType": "MetadataOptions",
     "libId": "ui5con24.lib",
     "libURI": "ui5con24/lib",
+    "libURIFlat": "",
     "libBasePath": "../..",
     "cdnDomain": "ui5.sap.com",
     "defaultTheme": "sap_horizon",
@@ -25,6 +30,9 @@
         "sap_fiori_3_hcb"
       ]
     },
+    "gte1_100_0": true,
+    "gte1_119_0": true,
+    "gte2_0_0": false,
     "setupCompleted": true
   }
 }
