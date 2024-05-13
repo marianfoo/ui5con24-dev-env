@@ -10,11 +10,11 @@
     "index.js"
   ],
   "devDependencies": {
-    "@cap-js/sqlite": "*"
+    "@cap-js/sqlite": "^1.7.0"
   },
   "dependencies": {
-    "@sap/cds": ">=7",
-    "express": "^4.17.1"
+    "@sap/cds": "^7.9.0",
+    "express": "^4.19.2"
   },
   "scripts": {
     "genres": "cds serve test/genres.cds",
