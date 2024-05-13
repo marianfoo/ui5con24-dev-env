@@ -9,6 +9,22 @@
 		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "${version}"
+		},
+		"crossNavigation": {
+		  "inbounds": {
+			"intent1": {
+			  "signature": {
+				"parameters": {},
+				"additionalParameters": "allowed"
+			  },
+			  "semanticObject": "ui5con24",
+			  "action": "120",
+			  "title": "UI5con 24",
+			  "info": "",
+			  "subTitle": "UI5 1.120",
+			  "icon": "sap-icon://course-book"
+			}
+		  }
 		}
 	},
 
@@ -34,7 +50,8 @@
 			"minUI5Version": "1.120.13",
 			"libs": {
 				"sap.ui.core": {},
-				"sap.m": {}
+				"sap.m": {},
+				"ui5con24.lib": {}
 			}
 		},
 

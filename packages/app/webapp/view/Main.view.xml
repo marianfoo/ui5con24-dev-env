@@ -4,6 +4,7 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core"
+	xmlns:example="ui5con24.lib"
 	core:require="{
 		formatter: 'ui5con24/app/model/formatter'
 	}">
@@ -24,6 +25,7 @@
 						press="sayHello" />
 				</additionalContent>
 			</IllustratedMessage>
+			<example:Example text="Hello World!"/>
 		</content>
 	</Page>
 

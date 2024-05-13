@@ -9,7 +9,7 @@
 		"strictNullChecks": false,
 		"strictPropertyInitialization": false,
 		"rootDir": "./webapp",
-		"types": ["@sapui5/types", "@types/qunit"],
+		"types": ["@sapui5/types", "@types/qunit", "ui5con24.lib"],
 		"paths": {
 			"ui5con24/app/*": ["./webapp/*"],
 			"unit/*": ["./webapp/test/unit/*"],

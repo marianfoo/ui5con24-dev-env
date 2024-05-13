@@ -23,5 +23,14 @@
     "genres": "cds serve test/genres.cds",
     "start": "cds-serve",
     "watch": "cds watch"
+  },
+  "cds": {
+    "cds-plugin-ui5": {
+      "modules": {
+        "ui5con24.app": {
+          "configFile": "ui5.yaml"
+        }
+      }
+    }
   }
 }
