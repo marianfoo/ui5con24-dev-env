@@ -10,7 +10,10 @@
     "index.js"
   ],
   "devDependencies": {
-    "@cap-js/sqlite": "^1.7.0"
+    "@cap-js/sqlite": "^1.7.0",
+    "cds-launchpad-plugin": "2.1.8",
+    "cds-plugin-ui5": "^0.8.3",
+    "ui5con24.app": "workspace:*"
   },
   "dependencies": {
     "@sap/cds": "^7.9.0",
