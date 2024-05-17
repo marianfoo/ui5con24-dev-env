@@ -1,3 +1,6 @@
+import Button from "sap/m/Button";
+import UIComponent from "sap/ui/core/UIComponent";
+
 /**
  * @namespace ui5con24.component
  */
@@ -37,7 +40,7 @@ export default class Component extends UIComponent {
 	}
 
 	createContent() {
-		return new Button({ text: buttonText, press: () => this.openSpreadsheetUploadDialog() });
+		return new Button({ text: "UI5con24 Component", press: () => console.log("Button pressed")});
 	}
 
 	//=============================================================================

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:server": "pnpm --filter @capire/bookshop watch"
+    "start:server": "pnpm --filter @capire/bookshop watch",
+    "start:app": "pnpm --filter ui5con24.app start"
   },
   "author": "",
   "license": "ISC"

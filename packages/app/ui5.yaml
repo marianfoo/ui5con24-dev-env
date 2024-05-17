@@ -19,3 +19,14 @@ server:
       afterMiddleware: compression
     - name: ui5-middleware-livereload
       afterMiddleware: compression
+    - name: ui5-middleware-ui5
+      afterMiddleware: compression
+      configuration:
+        modules:
+          ui5con24.component:
+            configFile: "ui5-serve.yaml"
+    - name: ui5-tooling-modules-middleware
+      afterMiddleware: compression
+      configuration:
+        addToNamespace: true
+        prependPathMappings: true

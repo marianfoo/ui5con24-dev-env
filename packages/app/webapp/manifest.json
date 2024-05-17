@@ -35,7 +35,8 @@
 			"desktop": true,
 			"tablet": true,
 			"phone": true
-		}
+		},
+		"fullWidth": true
 	},
 
 	"sap.ui5": {
@@ -52,8 +53,20 @@
 				"sap.ui.core": {},
 				"sap.m": {},
 				"ui5con24.lib": {}
+			},
+			"components":{
+				"ui5con24.component": {}
 			}
 		},
+
+		"componentUsages": {
+			"ui5con24component": {
+			  "name": "ui5con24.component"
+			}
+		  },
+		  "resourceRoots": {
+			"ui5con24.component": "./ui5con24/component/"
+		  },
 
 		"handleValidation": true,
 

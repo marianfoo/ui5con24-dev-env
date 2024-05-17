@@ -26,6 +26,13 @@
 				</additionalContent>
 			</IllustratedMessage>
 			<example:Example text="Hello World!"/>
+			<core:ComponentContainer
+			id="test"
+			width="100%"
+			usage="ui5con24component"
+			propagateModel="true"
+			async="true"
+		  />
 		</content>
 	</Page>
 

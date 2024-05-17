@@ -1,39 +1,25 @@
-specVersion: '3.0'
-metadata:
-  name: cc.spreadsheetimporter.v0_34_1
+specVersion: '2.6'
 type: application
+metadata:
+  name: ui5con24-component
 resources:
   configuration:
     paths:
       webapp: src
 customConfiguration:
   ui5-middleware-ui5:
-    mountPath: /thirdparty/customcontrol/spreadsheetimporter/v0_34_1
+    mountPath: /ui5con24/component/
 framework:
-  name: OpenUI5
-  version: 1.118.0
+  name: SAPUI5
+  version: 1.120.12
   libraries:
     - name: sap.m
     - name: sap.ui.core
     - name: themelib_sap_horizon
 server:
   customMiddleware:
-    - name: ui5-tooling-stringreplace-middleware
-      afterMiddleware: compression
-      configuration:
-        files:
-          - '**/*.js'
-          - '**/*.xml'
-          - '**/*.ts'
-        replace:
-          - placeholder: XXXnamespaceXXX
-            value: v0_34_1
-          - placeholder: XXXnamespaceShortXXX
-            value: v0341
-          - placeholder: XXXnamespaceSlashXXX
-            value: v0_34_1
     - name: ui5-tooling-transpile-middleware
-      afterMiddleware: ui5-tooling-stringreplace-middleware
+      afterMiddleware: compression
       configuration:
         filePattern: .+(ts|tsx)
         transpileTypeScript: true
