@@ -25,6 +25,9 @@
 						press="sayHello" />
 				</additionalContent>
 			</IllustratedMessage>
+			<Button
+				text="open Spreadsheet Imporert"
+				press="openSpreadsheetImporter" />
 			<example:Example text="Hello World!"/>
 			<core:ComponentContainer
 			id="test"
@@ -33,6 +36,24 @@
 			propagateModel="true"
 			async="true"
 		  />
+		  <Table id="table" items="{/Books}">
+			<columns>
+				<Column>
+					<Label text="Title"/>
+				</Column>
+				<Column>
+					<Label text="Author"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<Text text="{title}"/>
+						<Text text="{author_ID}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
 		</content>
 	</Page>
 

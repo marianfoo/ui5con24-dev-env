@@ -30,3 +30,16 @@ server:
       configuration:
         addToNamespace: true
         prependPathMappings: true
+    - name: ui5-middleware-simpleproxy
+      afterMiddleware: compression
+      mountPath: /resources/cc/spreadsheetimporter/v0_34_1/
+      configuration:
+        query:
+          sap-client: '001'
+    - name: ui5-middleware-simpleproxy
+      afterMiddleware: compression
+      mountPath: /admin
+      configuration:
+        baseUri: "http://localhost:4004/admin"
+    - name: ui5-middleware-serveframework
+      afterMiddleware: compression

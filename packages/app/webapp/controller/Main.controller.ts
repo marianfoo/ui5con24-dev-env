@@ -1,6 +1,5 @@
 import MessageBox from "sap/m/MessageBox";
 import BaseController from "./BaseController";
-import Example from "ui5con24/lib/Example";
 
 /**
  * @namespace ui5con24.app.controller
@@ -13,6 +12,20 @@ export default class Main extends BaseController {
 		// 	text: "Hello World!"
 		// });
 		// this.getView().addContent(example);
+	}
+
+	public async openSpreadsheetImporter(): Promise<void> {
+		const spreadsheetUpload = await this.getView()
+		.getController()
+		.getOwnerComponent()
+		.createComponent({
+		  usage: "spreadsheetImporter",
+		  async: true,
+		  componentData: {
+			context: this,
+		  },
+		});
+	  	spreadsheetUpload.openSpreadsheetUploadDialog();
 	}
 
 	public sayHello(): void {

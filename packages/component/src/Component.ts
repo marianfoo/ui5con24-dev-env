@@ -15,7 +15,7 @@ export default class Component extends UIComponent {
 		// interfaces: ["sap.ui.core.IAsyncContentCreation"],
 		manifest: "json",
 		properties: {
-
+			text: { type: "string" }
 		},
 		aggregations: {
 			rootControl: {

@@ -18,7 +18,8 @@
   ],
   "license": "Apache-2.0",
   "scripts": {
-    "build": "ui5 build --config=ui5-build.yaml --all --clean-dest --dest dist"
+    "build": "ui5 build --config=ui5-build.yaml --all --clean-dest --dest dist",
+    "gen-types": "npx @ui5/ts-interface-generator"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",

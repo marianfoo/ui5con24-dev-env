@@ -25,6 +25,16 @@
 			  "icon": "sap-icon://course-book"
 			}
 		  }
+		},
+		"dataSources": {
+		  "mainService": {
+			"uri": "/admin/",
+			"type": "OData",
+			"settings": {
+			  "annotations": [],
+			  "odataVersion": "4.0"
+			}
+		  }
 		}
 	},
 
@@ -62,6 +72,9 @@
 		"componentUsages": {
 			"ui5con24component": {
 			  "name": "ui5con24.component"
+			},
+			"spreadsheetImporter": {
+				"name": "cc.spreadsheetimporter.v0_34_1"
 			}
 		  },
 		  "resourceRoots": {
@@ -76,6 +89,16 @@
 		},
 
 		"models": {
+			"": {
+				"dataSource": "mainService",
+				"preload": true,
+				"settings": {
+				  "synchronizationMode": "None",
+				  "operationMode": "Server",
+				  "autoExpandSelect": true,
+				  "earlyRequests": true
+				}
+			  },
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {

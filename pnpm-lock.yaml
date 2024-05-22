@@ -74,6 +74,12 @@ importers:
       ui5-middleware-livereload:
         specifier: ^3.0.3
         version: 3.0.3
+      ui5-middleware-serveframework:
+        specifier: 3.1.1
+        version: 3.1.1(encoding@0.1.13)
+      ui5-middleware-simpleproxy:
+        specifier: 3.2.15
+        version: 3.2.15
       ui5-middleware-ui5:
         specifier: 3.1.4
         version: 3.1.4
@@ -1516,6 +1522,9 @@ packages:
 
   '@types/http-cache-semantics@4.0.4':
     resolution: {integrity: sha512-1m0bIFVc7eJWyve9S0RnuRgcQqF/Xd5QsUZAZeQFr1Q3/p9JWoQQEqmVy+DPTNpGXwhgIetAoYF8JSc33q29QA==}
+
+  '@types/http-proxy@1.17.14':
+    resolution: {integrity: sha512-SSrD0c1OQzlFX7pGu1eXxSEjemej64aaNPRhhVYUGqXh0BtldAAx37MG8btcumvpgKyZp1F5Gn3JkktdxiFv6w==}
 
   '@types/istanbul-lib-coverage@2.0.6':
     resolution: {integrity: sha512-2QF/t/auWm0lsy8XtKVPG19v3sSOQlJe/YHZgfjb/KBBHOGSV+J2q/S671rcq9uTBrLAXmZpqJiaQbMT+zNU1w==}
@@ -3464,6 +3473,15 @@ packages:
     resolution: {integrity: sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig==}
     engines: {node: '>= 14'}
 
+  http-proxy-middleware@2.0.6:
+    resolution: {integrity: sha512-ya/UeJ6HVBYxrgYotAZo1KvPWlgB48kUJLDePFeneHsVujFaW5WNj2NgWCAE//B1Dl02BIfYlpNgBy8Kf8Rjmw==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      '@types/express': ^4.17.13
+    peerDependenciesMeta:
+      '@types/express':
+        optional: true
+
   http-proxy@1.18.1:
     resolution: {integrity: sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ==}
     engines: {node: '>=8.0.0'}
@@ -3719,6 +3737,10 @@ packages:
   is-plain-obj@2.1.0:
     resolution: {integrity: sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==}
     engines: {node: '>=8'}
+
+  is-plain-obj@3.0.0:
+    resolution: {integrity: sha512-gwsOE28k+23GP1B6vFl1oVh/WOzmawBrKwo5Ev6wMKzPkaXaCDIQKzLnvsA42DRlbVTWorkgTKIviAKCWkfUwA==}
+    engines: {node: '>=10'}
 
   is-plain-obj@4.1.0:
     resolution: {integrity: sha512-+Pgi+vMuUNkJyExiMBt5IlFoMyKnr5zhJ4Uspz58WOhBF5QoIZkFyNHIbBAtHwzVAgk5RtndVNsDRN61/mmDqg==}
@@ -5789,6 +5811,12 @@ packages:
   ui5-middleware-livereload@3.0.3:
     resolution: {integrity: sha512-A0p3n16EL/8u/oR2YY3hiGSxayArEYbn5zzo0/uGZ3RE+hYdlEPtRdN4UM5AG/P2FaLvku7flnf3FnDRM7YnfA==}
 
+  ui5-middleware-serveframework@3.1.1:
+    resolution: {integrity: sha512-jTjsmeKPw9Q94I0Aemp/TrlBUbMGxaNhD/WCsGDfrlBfwowdv9FsXqqNsoD+WSa7Vl78VXTATtiVC4sD30VnZQ==}
+
+  ui5-middleware-simpleproxy@3.2.15:
+    resolution: {integrity: sha512-LlpuAk5ub1D7NzExUeBBdhiOOhwq0wARYFRMZIdNx6sPV/J4DccLpN7uOg3e3EAFTP0GOjZfOlgrjIsBxxAJIg==}
+
   ui5-middleware-ui5@3.1.4:
     resolution: {integrity: sha512-0kbTA0GC19UUyGC2ahgbGWVqkutwHMzstxgnI6nUpnVtIebE8cyD1jOzQV4vwcAvxNXdM68eghxHK4OLPXx+Rg==}
 
@@ -7848,6 +7876,10 @@ snapshots:
   '@types/estree@1.0.5': {}
 
   '@types/http-cache-semantics@4.0.4': {}
+
+  '@types/http-proxy@1.17.14':
+    dependencies:
+      '@types/node': 20.12.11
 
   '@types/istanbul-lib-coverage@2.0.6': {}
 
@@ -10349,6 +10381,16 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  http-proxy-middleware@2.0.6:
+    dependencies:
+      '@types/http-proxy': 1.17.14
+      http-proxy: 1.18.1
+      is-glob: 4.0.3
+      is-plain-obj: 3.0.0
+      micromatch: 4.0.5
+    transitivePeerDependencies:
+      - debug
+
   http-proxy@1.18.1:
     dependencies:
       eventemitter3: 4.0.7
@@ -10579,6 +10621,8 @@ snapshots:
   is-path-inside@3.0.3: {}
 
   is-plain-obj@2.1.0: {}
+
+  is-plain-obj@3.0.0: {}
 
   is-plain-obj@4.1.0: {}
 
@@ -12948,6 +12992,35 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+
+  ui5-middleware-serveframework@3.1.1(encoding@0.1.13):
+    dependencies:
+      '@ui5/project': 3.9.1(bluebird@3.7.2)
+      dotenv: 16.4.5
+      etag: 1.8.1
+      fresh: 0.5.2
+      https-proxy-agent: 7.0.4
+      js-yaml: 4.1.0
+      node-fetch: 2.7.0(encoding@0.1.13)
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - bluebird
+      - encoding
+      - supports-color
+
+  ui5-middleware-simpleproxy@3.2.15:
+    dependencies:
+      dotenv: 16.4.5
+      http-proxy-agent: 7.0.2
+      http-proxy-middleware: 2.0.6
+      https-proxy-agent: 7.0.4
+      minimatch: 7.4.6
+      proxy-from-env: 1.1.0
+      ui5-utils-express: 1.3.0
+    transitivePeerDependencies:
+      - '@types/express'
+      - debug
+      - supports-color
 
   ui5-middleware-ui5@3.1.4:
     dependencies:
