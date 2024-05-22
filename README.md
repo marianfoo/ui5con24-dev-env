@@ -27,3 +27,25 @@ flowchart TD
     CAP -->FLP[local Fiori Launchpad]
 
 ```
+
+## target setup
+
+```mermaid
+
+flowchart TD
+    npm_package_ui5_control(npm package ui5 control) --> Library
+    external_npm_package --> Component
+    external_npm_package --> UI5App_1_120
+    external_npm_package --> Library
+    ComponentExt(Component from ABAP Stack) --> UI5App_1_120(UI5 App 1.120 OData V4)
+    Component --> UI5App_1_120(UI5 App 1.120 OData V4)
+    Component --> UI5App_1_108(UI5 App 1.108 OData V2)
+    Control --> UI5App_1_120
+    Control --> Component
+    Control --> Library
+    Library --> UI5App_1_120
+    Library --> UI5App_1_108
+    UI5App_1_120 --> CAP
+    UI5App_1_108 --> CAP
+    CAP --> Fiori_Launchpad(Fiori Launchpad)
+```
