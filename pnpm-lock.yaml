@@ -10,6 +10,9 @@ importers:
 
   packages/app:
     dependencies:
+      ui5-cc-ui5con24.cc:
+        specifier: workspace:*
+        version: link:../control
       ui5con24.component:
         specifier: workspace:*
         version: link:../component

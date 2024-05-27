@@ -6,7 +6,7 @@
 	"license": "Apache-2.0",
 	"scripts": {
 		"clean": "rimraf dist coverage",
-		"build": "ui5 build --clean-dest",
+		"build": "ui5 build --config ui5-build.yaml --all --clean-dest",
 		"build:opt": "ui5 build self-contained --clean-dest --all",
 		"start": "ui5 serve --port 8080 -o index.html",
 		"start:silent": "ui5 serve --port 8080",
@@ -23,7 +23,8 @@
 	},
 	"dependencies": {
 		"ui5con24.lib": "workspace:*",
-		"ui5con24.component": "workspace:*"
+		"ui5con24.component": "workspace:*",
+		"ui5-cc-ui5con24.cc": "workspace:*"
 	},
 	"devDependencies": {
 		"@openui5/types": "^1.123.1",

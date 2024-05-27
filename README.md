@@ -2,6 +2,17 @@
 
 This repository showcases a advanced development environment for UI5 and CAP projects.
 
+## Current used packages
+
+- ui5-middleware-livereload
+- ui5-middleware-serveframework
+- ui5-middleware-simpleproxy
+- ui5-middleware-ui5
+- ui5-tooling-modules
+- ui5-tooling-transpile
+- cds-launchpad-plugin
+- cds-plugin-ui5
+
 ## TODO
 
 - [ ] Add CAP deployment @lemaiwo

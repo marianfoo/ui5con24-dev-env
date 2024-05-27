@@ -1,0 +1,8 @@
+specVersion: "3.0"
+metadata:
+  name: ui5con24.app
+type: application
+builder:
+  customTasks:
+    - name: ui5-tooling-transpile-task
+      afterTask: replaceVersion
