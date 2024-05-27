@@ -41,8 +41,8 @@ flowchart TD
       ComponentExt --> UI5AppABAP
       localComponent(Component) -->UI5AppABAP
       localComponent(Component) -->UI5App1
-      Library -->UI5App1(UI5 App 1.120 V4)
-      Library -->UI5AppABAP(UI5 App 1.108 V2)
+      Library -->UI5App1(UI5 App V4)
+      Library -->UI5AppABAP(UI5 App V2)
       CAPServer --> |OData V4| UI5App1
       ODataV2 --> |OData V2| UI5AppABAP
       CAPServer -->FLP[local Fiori Launchpad]

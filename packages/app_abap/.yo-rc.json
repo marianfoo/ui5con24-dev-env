@@ -2,11 +2,11 @@
   "generator-ui5-ts-app": {
     "namespace": "ui5con24.app.abap",
     "framework": "SAPUI5",
-    "frameworkVersion": "1.108.32",
+    "frameworkVersion": "1.120.14",
     "author": "„marianfoo“",
     "initrepo": false,
     "tstypes": "@sapui5/types",
-    "tstypesVersion": "1.108.32",
+    "tstypesVersion": "1.120.14",
     "appId": "ui5con24.app.abap",
     "appURI": "ui5con24/app",
     "cdnDomain": "ui5.sap.com",

@@ -4,7 +4,7 @@ metadata:
 type: library
 framework:
   name: SAPUI5
-  version: 1.120.13
+  version: 1.120.14
   libraries:
     - name: sap.ui.core
     - name: themelib_sap_horizon

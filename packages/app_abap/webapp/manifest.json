@@ -59,7 +59,7 @@
 		},
 
 		"dependencies": {
-			"minUI5Version": "1.108.32",
+			"minUI5Version": "1.120.14",
 			"libs": {
 				"sap.ui.core": {},
 				"sap.m": {},
@@ -78,9 +78,6 @@
 			"spreadsheetImporter": {
 				"name": "cc.spreadsheetimporter.v0_34_1"
 			}
-		  },
-		  "resourceRoots": {
-			"ui5con24.component": "./ui5con24/component/"
 		  },
 
 		"handleValidation": true,

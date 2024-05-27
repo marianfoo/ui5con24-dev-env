@@ -8,7 +8,7 @@ resources:
       webapp: dist
 framework:
   name: SAPUI5
-  version: "1.108.32"
+  version: "1.120.14"
   libraries:
     - name: sap.m
     - name: sap.ui.core
