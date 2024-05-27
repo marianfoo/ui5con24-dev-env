@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: test
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: https://sap-new.marian-marianzeis-de.nuve.run/
+          client: "001"
+        app:
+          name: ZUI5CON24
+          description: ui5con24
+          package: ZUICON24
+          transport: A4HK900087
+        exclude:
+          - /test/

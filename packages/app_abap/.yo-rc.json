@@ -1,0 +1,19 @@
+{
+  "generator-ui5-ts-app": {
+    "namespace": "ui5con24.app.abap",
+    "framework": "SAPUI5",
+    "frameworkVersion": "1.108.32",
+    "author": "„marianfoo“",
+    "initrepo": false,
+    "tstypes": "@sapui5/types",
+    "tstypesVersion": "1.108.32",
+    "appId": "ui5con24.app.abap",
+    "appURI": "ui5con24/app",
+    "cdnDomain": "ui5.sap.com",
+    "defaultTheme": "sap_horizon",
+    "gte1_98_0": true,
+    "gte1_104_0": true,
+    "gte1_115_0": true,
+    "setupCompleted": true
+  }
+}

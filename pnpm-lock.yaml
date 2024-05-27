@@ -93,6 +93,94 @@ importers:
         specifier: ^2.0.7
         version: 2.0.7(@wdio/cli@8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5))(@wdio/local-runner@8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5))(@wdio/mocha-framework@8.36.1)(@wdio/spec-reporter@8.36.1)(@wdio/types@8.36.1)(encoding@0.1.13)(typescript@5.4.5)(webdriverio@8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5))
 
+  packages/app_abap:
+    dependencies:
+      ui5con24.component:
+        specifier: workspace:*
+        version: link:../component
+      ui5con24.lib:
+        specifier: workspace:*
+        version: link:../library
+    devDependencies:
+      '@openui5/types':
+        specifier: ^1.123.1
+        version: 1.123.1
+      '@sap/ux-ui5-tooling':
+        specifier: '1'
+        version: 1.13.3(encoding@0.1.13)
+      '@sapui5/types':
+        specifier: 1.123.1
+        version: 1.123.1
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^7.8.0
+        version: 7.8.0(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
+      '@typescript-eslint/parser':
+        specifier: ^7.8.0
+        version: 7.8.0(eslint@8.57.0)(typescript@5.4.5)
+      '@ui5/cli':
+        specifier: ^3.10.1
+        version: 3.10.1(bluebird@3.7.2)
+      '@wdio/cli':
+        specifier: ^8.36.1
+        version: 8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5)
+      '@wdio/local-runner':
+        specifier: ^8.36.1
+        version: 8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5)
+      '@wdio/mocha-framework':
+        specifier: ^8.36.1
+        version: 8.36.1
+      '@wdio/spec-reporter':
+        specifier: ^8.36.1
+        version: 8.36.1
+      eslint:
+        specifier: ^8.56.0
+        version: 8.57.0
+      karma:
+        specifier: ^6.4.3
+        version: 6.4.3
+      karma-chrome-launcher:
+        specifier: ^3.2.0
+        version: 3.2.0
+      karma-coverage:
+        specifier: ^2.2.1
+        version: 2.2.1
+      karma-ui5:
+        specifier: ^3.0.4
+        version: 3.0.4(karma@6.4.3)
+      karma-ui5-transpile:
+        specifier: ^3.4.0
+        version: 3.4.0(karma@6.4.3)(ui5-tooling-transpile@3.4.0(@ui5/ts-interface-generator@0.8.2(typescript@5.4.5)))
+      rimraf:
+        specifier: ^5.0.7
+        version: 5.0.7
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.12.11)(typescript@5.4.5)
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+      ui5-middleware-livereload:
+        specifier: ^3.0.3
+        version: 3.0.3
+      ui5-middleware-serveframework:
+        specifier: 3.1.1
+        version: 3.1.1(encoding@0.1.13)
+      ui5-middleware-simpleproxy:
+        specifier: 3.2.15
+        version: 3.2.15
+      ui5-middleware-ui5:
+        specifier: 3.1.4
+        version: 3.1.4
+      ui5-tooling-modules:
+        specifier: 3.5.6
+        version: 3.5.6(typescript@5.4.5)
+      ui5-tooling-transpile:
+        specifier: ^3.4.0
+        version: 3.4.0(@ui5/ts-interface-generator@0.8.2(typescript@5.4.5))
+      wdio-ui5-service:
+        specifier: ^2.0.7
+        version: 2.0.7(@wdio/cli@8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5))(@wdio/local-runner@8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5))(@wdio/mocha-framework@8.36.1)(@wdio/spec-reporter@8.36.1)(@wdio/types@8.36.1)(encoding@0.1.13)(typescript@5.4.5)(webdriverio@8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5))
+
   packages/cap:
     dependencies:
       '@sap/cds':
@@ -252,6 +340,24 @@ importers:
       ui5-tooling-transpile:
         specifier: ^3.4.0
         version: 3.4.0(@ui5/ts-interface-generator@0.8.2(typescript@5.4.5))
+
+  packages/test:
+    devDependencies:
+      '@sap-ux/ui5-middleware-fe-mockserver':
+        specifier: '2'
+        version: 2.2.42
+      '@sap/ux-ui5-tooling':
+        specifier: '1'
+        version: 1.13.3(encoding@0.1.13)
+      '@ui5/cli':
+        specifier: ^3.0.0
+        version: 3.10.1(bluebird@3.7.2)
+      rimraf:
+        specifier: ^3.0.2
+        version: 3.0.2
+      ui5-task-flatten-library:
+        specifier: 0.2.5
+        version: 0.2.5
 
 packages:
 
@@ -884,6 +990,12 @@ packages:
     peerDependencies:
       '@sap/cds': '>=7.6'
 
+  '@chevrotain/types@9.1.0':
+    resolution: {integrity: sha512-3hbCD1CThkv9gnaSIPq0GUXwKni68e0ph6jIHwCvcWiQ4JB2xi8bFxBain0RF04qHUWuDjgnZLj4rLgimuGO+g==}
+
+  '@chevrotain/utils@9.1.0':
+    resolution: {integrity: sha512-llLJZ8OAlZrjGlBvamm6Zdo/HmGAcCLq5gx7cSwUX8No+n/8ip+oaC4x33IdZIif8+Rh5dQUIZXmfbSghiOmNQ==}
+
   '@colors/colors@1.5.0':
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
     engines: {node: '>=0.1.90'}
@@ -1323,6 +1435,9 @@ packages:
     resolution: {integrity: sha512-3sCK8BgBlXtzhQIE4gvH/9vwddNT0j3J2n3XbkZC+ZZ5U9zV5kWvQq4SrOns9hNFzNf0zLWjweSBNo5g59ZhxA==}
     engines: {node: '>=18.x'}
 
+  '@sap-ux/annotation-converter@0.8.13':
+    resolution: {integrity: sha512-OYNLaUNyOzWdb2W55Vv6whrKhRp6fg74XQ9AOSgkYBCpJRSLnNZxl+CZmEFAxvwwIuALGrSU7YMXfdhlRh5TLA==}
+
   '@sap-ux/axios-extension@1.11.6':
     resolution: {integrity: sha512-9w87YnHAZF5TLJ+3wmVWBkFnGeDwZ5I65jq9gPs49EmD6TjuOKuUuF0zFSsBh3OVS+m57o004K65HQP6VaXzmA==}
     engines: {node: '>=18.x'}
@@ -1333,6 +1448,12 @@ packages:
 
   '@sap-ux/control-property-editor@0.4.17':
     resolution: {integrity: sha512-7QwmtmY6SjpNjBZ2lQuOzf3pMd0FBtNlzc4VfqqMtiKegVeTvosZWpNw/6JuZf/vrfh3a3IeV75SPYhlN+heTw==}
+
+  '@sap-ux/edmx-parser@0.7.1':
+    resolution: {integrity: sha512-1oRIOEkwlpTBveo+9GOMGLKO9Dcyr/4jcBkUL08SKun1TENtg2ab41r+rNWMXbcoKGCpFEEr4ybLDPIgFyeilA==}
+
+  '@sap-ux/fe-mockserver-core@1.2.42':
+    resolution: {integrity: sha512-5d2edE3RGulXFsQY1gmPxgC0yw4aGO8y1A1Wm8l+2ML0RgiIxQFK0xn8vumtkqnz+/lnj6vq4T3Go4Rc7zTG6Q==}
 
   '@sap-ux/i18n@0.0.5':
     resolution: {integrity: sha512-QokArQWK1eTrw0Eoa0vJwNeOZwOluPXDeyJPczMTq3vht3WJNoyEeinb9KhtxgVdBLz/hZGxVMDdqU9TGM0Yqg==}
@@ -1363,6 +1484,13 @@ packages:
   '@sap-ux/ui5-config@0.22.1':
     resolution: {integrity: sha512-sgwVx/PvyrwNFGaYXD5KCj4kzPPGLWyrxOK+vKwkVqT9UNbZ3Javk32BxAIlVXDY3TKH8CJvrEaHDSJcR9euhQ==}
     engines: {node: '>=18.x'}
+
+  '@sap-ux/ui5-middleware-fe-mockserver@2.2.42':
+    resolution: {integrity: sha512-qzlOB4gHRUdZ8sKjzJsg5kyW4o6QL7jGi8fqo0KkDkQMBizKc++4h3tEl59yEETpfo57eCCR/xArtH5L65vPgQ==}
+
+  '@sap-ux/vocabularies-types@0.10.12':
+    resolution: {integrity: sha512-gqJXkvURw3MwCsIjs9ppHVYrwm/NRB7hOCugukd3zH5ILSgENsXq/ugPN2/2/+sOC93h6WxBdR7RkuAOY8SRMg==}
+    engines: {node: '>=18.0.0 < 19.0.0 || >=20.0.0 < 21.0.0', pnpm: '>=8'}
 
   '@sap-ux/yaml@0.14.1':
     resolution: {integrity: sha512-8JgrgtJgcJylXciu5dtOlmaZGYt2ZYmXMxwa7HMdM79jxbIBoksJF1Dbx5/W0Y314MpPnBzHUPxmcHBTikYRIg==}
@@ -1690,6 +1818,11 @@ packages:
     resolution: {integrity: sha512-SpDoMvOGYeBR8xOTDb1cu0uxJNsC1FxrENsZiRMd6R2PfUAiR0fiWQHn4dVBspoLx+jFemAfLfTMv1DEn0m1qQ==}
     engines: {node: ^16.18.0 || >=18.12.0, npm: '>= 8'}
 
+  '@ui5/logger@2.0.1':
+    resolution: {integrity: sha512-FU5moQF9HATZEIJVQxXWRsUKMveIRJNPSmH3Mptcuc05f6gKu1BWcamDaDHXmMSyoKRounY9Aok94NTQMi7eDw==}
+    engines: {node: '>= 10', npm: '>= 5'}
+    deprecated: 'UI5 Tooling version 2 is out of maintenance. Migrate your project to the latest version: https://sap.github.io/ui5-tooling/stable/'
+
   '@ui5/logger@3.0.0':
     resolution: {integrity: sha512-Np9pHhr+dnyL2gDFwIx6c6Xy0yhtpBIqUQM9An8uLX/wIcRjIjBSQ/r16o3YgS9roY59I/uj5ZEbIa1cdS3Dzg==}
     engines: {node: ^16.18.0 || >=18.12.0, npm: '>= 8'}
@@ -1856,6 +1989,10 @@ packages:
     resolution: {integrity: sha512-4nJ3yixlEthEJ9Rk4vPcdBRkZvQZlYyu8j4/Mqz5sgIkddmEnH2Yj2ZrnP9S3tQOvSNRUIgVNF/1yPpRAGNRig==}
     engines: {node: '>=14.16'}
 
+  ansi-regex@2.1.1:
+    resolution: {integrity: sha512-TIGnTpdo+E3+pCyAluZvtED5p5wCqLdezCyhPZzKPcxvFplEt4i+W7OONCKgeZFT3+y5NZZfOOS/Bdcanm1MYA==}
+    engines: {node: '>=0.10.0'}
+
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
     engines: {node: '>=8'}
@@ -1888,6 +2025,9 @@ packages:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
     engines: {node: '>= 8'}
 
+  aproba@1.2.0:
+    resolution: {integrity: sha512-Y9J6ZjXtoYh8RnXVCMOU/ttDmk1aBjunq9vO0ta5x85WDQiQfUF9sIPBITdbiiIVcBo03Hi3jMxigBtsddlXRw==}
+
   aproba@2.0.0:
     resolution: {integrity: sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==}
 
@@ -1899,9 +2039,14 @@ packages:
     resolution: {integrity: sha512-ZcbTaIqJOfCc03QwD468Unz/5Ir8ATtvAHsK+FdXbDIbGfihqh9mrvdcYunQzqn4HrvWWaFyaxJhGZagaJJpPQ==}
     engines: {node: '>= 14'}
 
+  are-we-there-yet@1.1.7:
+    resolution: {integrity: sha512-nxwy40TuMiUGqMyRHgCSWZ9FM4VAoRP4xUYSTv5ImRog+h9yISPbVH7H8fASCIzYn9wlEv4zvFL7uKDMCFQm3g==}
+    deprecated: This package is no longer supported.
+
   are-we-there-yet@3.0.1:
     resolution: {integrity: sha512-QZW4EDmGwlYur0Yyf/b2uGucHQMa8aFUP7eu9ddR73vvhFyt4V0Vl3QHPcTNJ8l6qYOBdxgXdnBXQrHilfRQBg==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+    deprecated: This package is no longer supported.
 
   arg@4.1.3:
     resolution: {integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==}
@@ -2226,6 +2371,9 @@ packages:
   chevrotain@7.1.1:
     resolution: {integrity: sha512-wy3mC1x4ye+O+QkEinVJkPf5u2vsrDIYW9G7ZuwFl6v/Yu0LwUuT2POsb+NUWApebyxfkQq6+yDfRExbnI5rcw==}
 
+  chevrotain@9.1.0:
+    resolution: {integrity: sha512-A86/55so63HCfu0dgGg3j9u8uuuBOrSqly1OhBZxRu2x6sAKILLzfVjbGMw45kgier6lz45EzcjjWtTRgoT84Q==}
+
   chokidar@3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
     engines: {node: '>= 8.10.0'}
@@ -2327,6 +2475,10 @@ packages:
 
   cloneable-readable@1.1.3:
     resolution: {integrity: sha512-2EF8zTQOxYq70Y4XKtorQupqF0m49MBz2/yf5Bj+MHjvpG3Hy7sImifnqD6UA+TKYxeSV+u6qqQPawN5UvnpKQ==}
+
+  code-point-at@1.1.0:
+    resolution: {integrity: sha512-RpAVKQA5T63xEj6/giIbUEtZwJ4UFIc3ZtvEkiaUERylqe8xb5IvqcgOurZLahv93CLKfxcw5YI+DZcUBRyLXA==}
+    engines: {node: '>=0.10.0'}
 
   color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -2624,6 +2776,10 @@ packages:
   decamelize@6.0.0:
     resolution: {integrity: sha512-Fv96DCsdOgB6mdGl67MT5JaTNKRzrzill5OH5s8bjYJXVlcXyPYGyPsUkWyGV5p1TXI5esYIYMMeDJL0hEIwaA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  decode-uri-component@0.2.2:
+    resolution: {integrity: sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==}
+    engines: {node: '>=0.10'}
 
   decompress-response@6.0.0:
     resolution: {integrity: sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==}
@@ -3097,6 +3253,10 @@ packages:
     resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}
     engines: {node: '>=8'}
 
+  filter-obj@1.1.0:
+    resolution: {integrity: sha512-8rXg1ZnX7xzy2NGDVkBVaAy+lSlPNwad13BtgSlLuxfIslyt5Vg64U7tFcCt4WS1R0hvtnQybT/IyCkGZ3DpXQ==}
+    engines: {node: '>=0.10.0'}
+
   finalhandler@1.1.2:
     resolution: {integrity: sha512-aAWcW57uxVNrQZqFXjITpW3sIUQmHGG3qSb9mUah9MgMC4NeWhNOlNjXEYq3HjRAvL6arUviZGGJsBg6z0zsWA==}
     engines: {node: '>= 0.8'}
@@ -3220,9 +3380,14 @@ packages:
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
 
+  gauge@2.7.4:
+    resolution: {integrity: sha512-14x4kjc6lkD3ltw589k0NrPD6cCNTD6CWoVUNpB85+DrtONoZn+Rug6xZU5RvSC4+TZPxA5AnBibQYAvZn41Hg==}
+    deprecated: This package is no longer supported.
+
   gauge@4.0.4:
     resolution: {integrity: sha512-f9m+BEN5jkg6a0fZjleidjN51VE1X+mPFQ2DJ0uv1V39oCLCbsGe6yjbBnp7eK7z/+GAon99a3nHuqbuuthyPg==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+    deprecated: This package is no longer supported.
 
   gaze@1.1.3:
     resolution: {integrity: sha512-BRdNm8hbWzFzWHERTrejLqwHDfS4GibPoq5wjTPIoJHoBtKGPg3xAFfxmM+9ztbXelxcf2hwQcaz1PtmFeue8g==}
@@ -3669,6 +3834,10 @@ packages:
 
   is-extglob@2.1.1:
     resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
+    engines: {node: '>=0.10.0'}
+
+  is-fullwidth-code-point@1.0.0:
+    resolution: {integrity: sha512-1pqUqRjkhPJ9miNq9SwMfdvi6lBJcd6eFxvfaivQhaH3SgisfiuudvFntdKOmxuee/77l+FPjKrQjWvmPjWrRw==}
     engines: {node: '>=0.10.0'}
 
   is-fullwidth-code-point@3.0.0:
@@ -4568,12 +4737,21 @@ packages:
     resolution: {integrity: sha512-ppwTtiJZq0O/ai0z7yfudtBpWIoxM8yE6nHi1X47eFR2EWORqfbu6CnPlNsjeN683eT0qG6H/Pyf9fCcvjnnnQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
+  npmlog@4.1.2:
+    resolution: {integrity: sha512-2uUqazuKlTaSI/dC8AzicUck7+IrEaOnN/e0jd3Xtt1KcGpwx30v50mL7oPyr/h9bL3E4aZccVwpwP+5W9Vjkg==}
+    deprecated: This package is no longer supported.
+
   npmlog@6.0.2:
     resolution: {integrity: sha512-/vBvz5Jfr9dT/aFWd0FIRf+T/Q2WBsLENygUaFUqstqsycmZAP/t5BvFJTK0viFmSUxiUKTUplWy5vt+rvKIxg==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+    deprecated: This package is no longer supported.
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
+
+  number-is-nan@1.0.1:
+    resolution: {integrity: sha512-4jbtZXNAsfZbAHiiqjLPBiCl16dES1zI4Hpzzxw61Tk+loF+sBDBKx1ICKKKwIqQ7M0mFn1TmkN7euSncWgHiQ==}
+    engines: {node: '>=0.10.0'}
 
   object-assign-defined@1.0.2:
     resolution: {integrity: sha512-xO24o25GXklHv9k1eQUvHpNpqhfv3sXmT4yQaLXdaig0EiK9ts7M2UECjjyIpEg8ckCiSZBec0qsAr4knbgdDA==}
@@ -4998,6 +5176,10 @@ packages:
 
   query-selector-shadow-dom@1.0.1:
     resolution: {integrity: sha512-lT5yCqEBgfoMYpf3F2xQRK7zEr1rhIIZuceDK6+xRkJQ4NMbHTwXqk4NkwDwQMNqXgG9r9fyHnzwNVs6zV5KRw==}
+
+  query-string@7.1.3:
+    resolution: {integrity: sha512-hh2WYhq4fi8+b+/2Kg9CEge4fDPvHS534aOOvOZeQ3+Vf2mCFsaFBYj0i+iXcAq6I9Vzp5fjMFBlONvayDC1qg==}
+    engines: {node: '>=6'}
 
   querystring@0.2.0:
     resolution: {integrity: sha512-X/xY82scca2tau62i9mDyU9K+I+djTMUsvwf7xnUX5GLvVzgJybOJf4Y6o9Zx3oJK/LSXg5tTZBjwzqVPaPO2g==}
@@ -5477,6 +5659,10 @@ packages:
     resolution: {integrity: sha512-r46gZQZQV+Kl9oItvl1JZZqJKGr+oEkB08A6BzkiR7593/7IbtuncXHd2YoYeTsG4157ZssMu9KYvUHLcjcDoA==}
     engines: {node: '>=6.0.0'}
 
+  split-on-first@1.1.0:
+    resolution: {integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==}
+    engines: {node: '>=6'}
+
   split2@4.2.0:
     resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
     engines: {node: '>= 10.x'}
@@ -5524,9 +5710,17 @@ packages:
   streamx@2.16.1:
     resolution: {integrity: sha512-m9QYj6WygWyWa3H1YY69amr4nVgy61xfjys7xO7kviL5rfIEc2naf+ewFiOA+aEJD7y0JO3h2GoiUv4TDwEGzQ==}
 
+  strict-uri-encode@2.0.0:
+    resolution: {integrity: sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==}
+    engines: {node: '>=4'}
+
   string-argv@0.3.2:
     resolution: {integrity: sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==}
     engines: {node: '>=0.6.19'}
+
+  string-width@1.0.2:
+    resolution: {integrity: sha512-0XsVpQLnVCXHJfyEs8tC0zpTVIr5PKKsQtkT29IwupnPTjtPmQ3xT/4yCREF9hYkV/3M3kzcUTSAZT6a6h81tw==}
+    engines: {node: '>=0.10.0'}
 
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
@@ -5560,6 +5754,10 @@ packages:
 
   string_decoder@1.3.0:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
+
+  strip-ansi@3.0.1:
+    resolution: {integrity: sha512-VhumSSbBqDTP8p2ZLKj40UjBCV4+v8bUSEpUb4KjRgWk9pbqGF4REFj6KEagidb2f/M6AzC0EmFyDNGaw9OCzg==}
+    engines: {node: '>=0.10.0'}
 
   strip-ansi@6.0.1:
     resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
@@ -5819,6 +6017,9 @@ packages:
 
   ui5-middleware-ui5@3.1.4:
     resolution: {integrity: sha512-0kbTA0GC19UUyGC2ahgbGWVqkutwHMzstxgnI6nUpnVtIebE8cyD1jOzQV4vwcAvxNXdM68eghxHK4OLPXx+Rg==}
+
+  ui5-task-flatten-library@0.2.5:
+    resolution: {integrity: sha512-oHT+NQeP1GdJTddBtbq77Uv8KLocSLblwoVuNIVkE3v3/397SbWndguhcGWegXlo0BpD5hl9zMXcN9TnflyTfw==}
 
   ui5-tooling-modules@3.5.4:
     resolution: {integrity: sha512-dMKu3WyFDlb3naTNhYnNhXKhdwT0o9nFgvEJ1BT5KLnUvKKfmoO5L0BSihKu8jZQjXUP0+nhbBrS42mXs8vbVw==}
@@ -7035,6 +7236,10 @@ snapshots:
       '@sap/cds': 7.9.0(express@4.19.2)
       better-sqlite3: 9.6.0
 
+  '@chevrotain/types@9.1.0': {}
+
+  '@chevrotain/utils@9.1.0': {}
+
   '@colors/colors@1.5.0': {}
 
   '@colors/colors@1.6.0': {}
@@ -7573,6 +7778,10 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@sap-ux/annotation-converter@0.8.13':
+    dependencies:
+      '@sap-ux/vocabularies-types': 0.10.12
+
   '@sap-ux/axios-extension@1.11.6(debug@4.3.4)':
     dependencies:
       '@sap-ux/btp-utils': 0.14.3(debug@4.3.4)
@@ -7596,6 +7805,28 @@ snapshots:
       - debug
 
   '@sap-ux/control-property-editor@0.4.17': {}
+
+  '@sap-ux/edmx-parser@0.7.1':
+    dependencies:
+      xml-js: 1.6.11
+
+  '@sap-ux/fe-mockserver-core@1.2.42':
+    dependencies:
+      '@sap-ux/annotation-converter': 0.8.13
+      '@sap-ux/edmx-parser': 0.7.1
+      '@ui5/logger': 2.0.1
+      balanced-match: 1.0.2
+      body-parser: 1.20.2
+      chevrotain: 9.1.0
+      chokidar: 3.6.0
+      etag: 1.8.1
+      graceful-fs: 4.2.11
+      lodash.clonedeep: 4.5.0
+      lodash.merge: 4.6.2
+      query-string: 7.1.3
+      router: 1.3.8
+    transitivePeerDependencies:
+      - supports-color
 
   '@sap-ux/i18n@0.0.5':
     dependencies:
@@ -7654,6 +7885,14 @@ snapshots:
       '@sap-ux/yaml': 0.14.1
       lodash: 4.17.21
       semver: 7.5.4
+
+  '@sap-ux/ui5-middleware-fe-mockserver@2.2.42':
+    dependencies:
+      '@sap-ux/fe-mockserver-core': 1.2.42
+    transitivePeerDependencies:
+      - supports-color
+
+  '@sap-ux/vocabularies-types@0.10.12': {}
 
   '@sap-ux/yaml@0.14.1':
     dependencies:
@@ -8118,6 +8357,10 @@ snapshots:
       pretty-hrtime: 1.0.3
       random-int: 3.0.0
 
+  '@ui5/logger@2.0.1':
+    dependencies:
+      npmlog: 4.1.2
+
   '@ui5/logger@3.0.0':
     dependencies:
       chalk: 5.3.0
@@ -8447,6 +8690,8 @@ snapshots:
 
   ansi-escapes@6.2.1: {}
 
+  ansi-regex@2.1.1: {}
+
   ansi-regex@5.0.1: {}
 
   ansi-regex@6.0.1: {}
@@ -8470,6 +8715,8 @@ snapshots:
       normalize-path: 3.0.0
       picomatch: 2.3.1
 
+  aproba@1.2.0: {}
+
   aproba@2.0.0:
     optional: true
 
@@ -8492,6 +8739,11 @@ snapshots:
       readdir-glob: 1.1.3
       tar-stream: 3.1.7
       zip-stream: 6.0.1
+
+  are-we-there-yet@1.1.7:
+    dependencies:
+      delegates: 1.0.0
+      readable-stream: 2.3.8
 
   are-we-there-yet@3.0.1:
     dependencies:
@@ -8908,6 +9160,12 @@ snapshots:
     dependencies:
       regexp-to-ast: 0.5.0
 
+  chevrotain@9.1.0:
+    dependencies:
+      '@chevrotain/types': 9.1.0
+      '@chevrotain/utils': 9.1.0
+      regexp-to-ast: 0.5.0
+
   chokidar@3.5.3:
     dependencies:
       anymatch: 3.1.3
@@ -9013,6 +9271,8 @@ snapshots:
       inherits: 2.0.4
       process-nextick-args: 2.0.1
       readable-stream: 2.3.8
+
+  code-point-at@1.1.0: {}
 
   color-convert@1.9.3:
     dependencies:
@@ -9142,8 +9402,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  console-control-strings@1.1.0:
-    optional: true
+  console-control-strings@1.1.0: {}
 
   content-disposition@0.5.4:
     dependencies:
@@ -9316,6 +9575,8 @@ snapshots:
 
   decamelize@6.0.0: {}
 
+  decode-uri-component@0.2.2: {}
+
   decompress-response@6.0.0:
     dependencies:
       mimic-response: 3.1.0
@@ -9366,8 +9627,7 @@ snapshots:
 
   delayed-stream@1.0.0: {}
 
-  delegates@1.0.0:
-    optional: true
+  delegates@1.0.0: {}
 
   depd@2.0.0: {}
 
@@ -9935,6 +10195,8 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
+  filter-obj@1.1.0: {}
+
   finalhandler@1.1.2:
     dependencies:
       debug: 2.6.9
@@ -10072,6 +10334,17 @@ snapshots:
 
   functions-have-names@1.2.3: {}
 
+  gauge@2.7.4:
+    dependencies:
+      aproba: 1.2.0
+      console-control-strings: 1.1.0
+      has-unicode: 2.0.1
+      object-assign: 4.1.1
+      signal-exit: 3.0.7
+      string-width: 1.0.2
+      strip-ansi: 3.0.1
+      wide-align: 1.1.5
+
   gauge@4.0.4:
     dependencies:
       aproba: 2.0.0
@@ -10175,7 +10448,7 @@ snapshots:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.0.8
+      minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
 
@@ -10304,8 +10577,7 @@ snapshots:
     dependencies:
       has-symbols: 1.0.3
 
-  has-unicode@2.0.1:
-    optional: true
+  has-unicode@2.0.1: {}
 
   has-yarn@2.1.0: {}
 
@@ -10574,6 +10846,10 @@ snapshots:
   is-docker@3.0.0: {}
 
   is-extglob@2.1.1: {}
+
+  is-fullwidth-code-point@1.0.0:
+    dependencies:
+      number-is-nan: 1.0.1
 
   is-fullwidth-code-point@3.0.0: {}
 
@@ -11215,7 +11491,7 @@ snapshots:
       binaryextensions: 4.19.0
       commondir: 1.0.1
       deep-extend: 0.6.0
-      ejs: 3.1.9
+      ejs: 3.1.10
       globby: 11.1.0
       isbinaryfile: 4.0.10
       minimatch: 3.1.2
@@ -11582,6 +11858,13 @@ snapshots:
     dependencies:
       path-key: 4.0.0
 
+  npmlog@4.1.2:
+    dependencies:
+      are-we-there-yet: 1.1.7
+      console-control-strings: 1.1.0
+      gauge: 2.7.4
+      set-blocking: 2.0.0
+
   npmlog@6.0.2:
     dependencies:
       are-we-there-yet: 3.0.1
@@ -11593,6 +11876,8 @@ snapshots:
   nth-check@2.1.1:
     dependencies:
       boolbase: 1.0.0
+
+  number-is-nan@1.0.1: {}
 
   object-assign-defined@1.0.2: {}
 
@@ -12048,6 +12333,13 @@ snapshots:
 
   query-selector-shadow-dom@1.0.1: {}
 
+  query-string@7.1.3:
+    dependencies:
+      decode-uri-component: 0.2.2
+      filter-obj: 1.1.0
+      split-on-first: 1.1.0
+      strict-uri-encode: 2.0.0
+
   querystring@0.2.0: {}
 
   queue-microtask@1.2.3: {}
@@ -12432,8 +12724,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  set-blocking@2.0.0:
-    optional: true
+  set-blocking@2.0.0: {}
 
   set-function-length@1.2.2:
     dependencies:
@@ -12625,6 +12916,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  split-on-first@1.1.0: {}
+
   split2@4.2.0: {}
 
   sprintf-js@1.0.3: {}
@@ -12680,7 +12973,15 @@ snapshots:
     optionalDependencies:
       bare-events: 2.2.2
 
+  strict-uri-encode@2.0.0: {}
+
   string-argv@0.3.2: {}
+
+  string-width@1.0.2:
+    dependencies:
+      code-point-at: 1.1.0
+      is-fullwidth-code-point: 1.0.0
+      strip-ansi: 3.0.1
 
   string-width@4.2.3:
     dependencies:
@@ -12733,6 +13034,10 @@ snapshots:
   string_decoder@1.3.0:
     dependencies:
       safe-buffer: 5.2.1
+
+  strip-ansi@3.0.1:
+    dependencies:
+      ansi-regex: 2.1.1
 
   strip-ansi@6.0.1:
     dependencies:
@@ -13035,6 +13340,10 @@ snapshots:
       - bluebird
       - supports-color
 
+  ui5-task-flatten-library@0.2.5:
+    dependencies:
+      '@ui5/logger': 2.0.1
+
   ui5-tooling-modules@3.5.4(typescript@5.4.5):
     dependencies:
       '@buxlabs/amd-to-es6': 0.16.3
@@ -13197,7 +13506,7 @@ snapshots:
       pupa: 2.1.1
       registry-auth-token: 5.0.2
       registry-url: 5.1.0
-      semver: 7.5.3
+      semver: 7.6.2
       semver-diff: 3.1.1
       xdg-basedir: 4.0.0
     transitivePeerDependencies:
@@ -13410,7 +13719,6 @@ snapshots:
   wide-align@1.1.5:
     dependencies:
       string-width: 4.2.3
-    optional: true
 
   widest-line@3.1.0:
     dependencies:
