@@ -25,9 +25,6 @@
 						press="sayHello" />
 				</additionalContent>
 			</IllustratedMessage>
-			<Button
-				text="open Spreadsheet Imporert"
-				press="openSpreadsheetImporter" />
 			<example:Example text="Hello World!"/>
 			<core:ComponentContainer
 			id="test"

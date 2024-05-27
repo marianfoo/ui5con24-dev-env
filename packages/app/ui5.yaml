@@ -35,5 +35,10 @@ server:
       mountPath: /admin
       configuration:
         baseUri: "http://localhost:4004/admin"
+    - name: ui5-middleware-simpleproxy
+      afterMiddleware: compression
+      mountPath: /resources/ui5con24/component
+      configuration:
+        baseUri: "http://localhost:8080//ui5con24/component"
     - name: ui5-middleware-serveframework
       afterMiddleware: compression

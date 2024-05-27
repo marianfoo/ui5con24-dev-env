@@ -6,6 +6,7 @@
   "scripts": {
     "start:server": "pnpm --filter @capire/bookshop watch",
     "start:app": "pnpm --filter ui5con24.app start",
+    "start:app:silent": "pnpm --filter ui5con24.app start:silent",
     "start:app-abap": "pnpm --filter ui5con24.app.abap start",
     "start:app-abap:silent": "pnpm --filter ui5con24.app.abap start:silent"
   },

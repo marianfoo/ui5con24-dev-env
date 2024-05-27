@@ -72,13 +72,7 @@
 		"componentUsages": {
 			"ui5con24component": {
 			  "name": "ui5con24.component"
-			},
-			"spreadsheetImporter": {
-				"name": "cc.spreadsheetimporter.v0_34_1"
 			}
-		  },
-		  "resourceRoots": {
-			"ui5con24.component": "./ui5con24/component/"
 		  },
 
 		"handleValidation": true,
