@@ -87,6 +87,14 @@
 			"cozy": true
 		},
 
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+
 		"models": {
 			"": {
 				"dataSource": "mainService",

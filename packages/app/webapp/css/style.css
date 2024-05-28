@@ -1,0 +1,12 @@
+.customHBox {
+    border: 1px solid #ccc; /* Gray border */
+    padding: 10px; /* Padding around content */
+    margin-top: 5px; /* Space between label and box */
+}
+
+.customLabel {
+    font-weight: bold; /* Make labels bold */
+    font-size: 2em; /* Larger font size similar to H1 */
+    margin-bottom: 5px; /* Space below the label */
+    color: #333; /* Darker text for better readability */
+}
