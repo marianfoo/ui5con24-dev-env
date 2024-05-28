@@ -19,7 +19,8 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "ui5 build --config=ui5-build.yaml --all --clean-dest --dest dist",
-    "gen-types": "npx @ui5/ts-interface-generator"
+    "gen-types": "npx @ui5/ts-interface-generator",
+    "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml -y"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",

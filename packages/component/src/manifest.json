@@ -5,7 +5,7 @@
     "service": "ui5con24component"
   },
   "sap.app": {
-    "id": "ui5con24-component",
+    "id": "ui5con24.component",
     "type": "component",
     "i18n": "i18n/i18n.properties",
     "title": "{{title}}",

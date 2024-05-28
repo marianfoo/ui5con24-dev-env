@@ -6,7 +6,7 @@
 	"license": "Apache-2.0",
 	"scripts": {
 		"clean": "rimraf dist coverage",
-		"build": "ui5 build --clean-dest",
+		"build": "ui5 build --config ui5-build.yaml  --clean-dest",
 		"build:opt": "ui5 build self-contained --clean-dest --all",
 		"start": "ui5 serve --port 8081 -o index.html",
 		"start:silent": "ui5 serve --port 8081",
@@ -19,10 +19,11 @@
 		"karma-ci": "karma start karma-ci.conf.js",
 		"karma-ci-cov": "karma start karma-ci-cov.conf.js",
 		"test": "npm run lint && npm run karma-ci-cov",
-		"wdi5": "wdio run ./webapp/test/e2e/wdio.conf.ts"
+		"wdi5": "wdio run ./webapp/test/e2e/wdio.conf.ts",
+		"deploy": "npm run build && fiori deploy --config ui5-deploy.yaml -y"
 	},
 	"dependencies": {
-		"ui5con24.lib": "workspace:*",
+		"ui5con24.lib.abap": "workspace:*",
 		"ui5con24.component": "workspace:*"
 	},
 	"devDependencies": {

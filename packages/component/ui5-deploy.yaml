@@ -1,6 +1,6 @@
 specVersion: '2.5'
 metadata:
-  name: cc.spreadsheetimporter.v0_33_4
+  name: ui5con24-component
 type: application
 builder:
   resources:
@@ -19,7 +19,7 @@ builder:
           username: env:XYZ_USER
           password: env:XYZ_PASSWORD
         app:
-          name: Z_ui5con24_app2
+          name: Z_ui5con24_com1
           description: ''
           package: Z_SHEETUPLOAD
           transport: A4HK900087

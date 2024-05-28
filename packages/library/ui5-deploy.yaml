@@ -19,7 +19,7 @@ builder:
           username: env:XYZ_USER
           password: env:XYZ_PASSWORD
         app:
-          name: Z_ui5con24_app2
+          name: Z_ui5con24_lib1
           description: ''
           package: Z_SHEETUPLOAD
           transport: A4HK900087

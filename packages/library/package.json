@@ -17,7 +17,8 @@
 		"karma": "karma start",
 		"karma-ci": "karma start karma-ci.conf.js",
 		"karma-ci-cov": "karma start karma-ci-cov.conf.js",
-		"test": "npm run lint && npm run karma-ci-cov"
+		"test": "npm run lint && npm run karma-ci-cov",
+		"deploy": "npm run build && fiori deploy --config ui5-deploy.yaml -y"
 	},
 	"devDependencies": {
 		"@sapui5/types": "1.123.1",
@@ -35,6 +36,7 @@
 		"rimraf": "^5.0.7",
 		"typescript": "^5.4.5",
 		"ui5-middleware-livereload": "^3.0.3",
-		"ui5-tooling-transpile": "^3.4.0"
+		"ui5-tooling-transpile": "^3.4.0",
+		"@sap/ux-ui5-tooling": "1.13.5"
 	}
 }

@@ -39,6 +39,6 @@ server:
       afterMiddleware: compression
       mountPath: /resources/ui5con24/component
       configuration:
-        baseUri: "http://localhost:8080//ui5con24/component"
+        baseUri: "http://localhost:8080/ui5con24/component"
     - name: ui5-middleware-serveframework
       afterMiddleware: compression

@@ -1,5 +1,5 @@
 import Event from "sap/ui/base/Event";
-import ExampleColor from "ui5con24/lib/ExampleColor";
+import { ExampleColor } from "ui5con24/lib/library";
 import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 import { $ControlSettings } from "sap/ui/core/Control";
 

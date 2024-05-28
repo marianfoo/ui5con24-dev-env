@@ -63,7 +63,7 @@
 			"libs": {
 				"sap.ui.core": {},
 				"sap.m": {},
-				"ui5con24.lib": {}
+				"ui5con24.lib.abap": {}
 			},
 			"components":{
 				"ui5con24.component": {},
