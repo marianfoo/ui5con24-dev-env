@@ -1,4 +1,9 @@
 node_modules
+gen/
+*.zip
+*.d.ts
+dist/
+*.mtar
 packages/test
 archive.zip
 dist

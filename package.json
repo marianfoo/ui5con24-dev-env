@@ -7,10 +7,16 @@
     "start:server": "pnpm --filter @capire/bookshop watch",
     "start:server:dev": "pnpm --filter @capire/bookshop watch:dev",
     "start:app": "pnpm --filter ui5con24.app start",
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
     "start:app:silent": "pnpm --filter ui5con24.app start:silent",
     "start:app-abap": "pnpm --filter ui5con24.app.abap start",
     "start:app-abap:silent": "pnpm --filter ui5con24.app.abap start:silent"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mbt": "^1.2.27",
+    "rimraf": "^5.0.7"
+  }
 }

@@ -2,13 +2,7 @@
   "name": "@capire/bookshop",
   "version": "1.0.0",
   "description": "A simple self-contained bookshop service.",
-  "files": [
-    "app",
-    "srv",
-    "db",
-    "index.cds",
-    "index.js"
-  ],
+  "private": true,
   "devDependencies": {
     "@cap-js/sqlite": "^1.7.0",
     "cds-launchpad-plugin": "2.2.0",
@@ -19,15 +13,34 @@
   },
   "dependencies": {
     "@sap/cds": "^7.9.0",
-    "express": "^4.19.2"
+    "@sap/cds-dk": "^7.9.2",
+    "@sap/cds-hana": "^2.0.0",
+    "@sap/xsenv": "^5.1.0",
+    "@sap/xssec": "3.6.1",
+    "express": "^4.19.2",
+    "passport": "^0.7.0"
   },
   "scripts": {
     "genres": "cds serve test/genres.cds",
     "start": "cds-serve",
     "watch": "cds watch",
-    "watch:dev": "NODE_ENV=development cds watch"
+    "watch:dev": "NODE_ENV=development cds watch",
+    "build": "cds build --production"
   },
   "cds": {
+    "requires": {
+      "[production]": {
+        "auth": "xsuaa",
+        "db": {
+          "kind": "hana"
+        }
+      },
+      "db": {
+        "kind": "sqlite",
+        "url": "db.sqlite"
+      },
+      "auth": "dummy"
+    },
     "cds-plugin-ui5": {
       "modules": {
         "ui5con24.app": {
@@ -50,5 +63,8 @@
 
     }
     }
+  },
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
   }
 }
