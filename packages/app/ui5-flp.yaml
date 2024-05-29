@@ -22,6 +22,7 @@ server:
     - name: ui5-middleware-ui5
       afterMiddleware: compression
       configuration:
+        debug: true
         modules:
           ui5con24.component:
             configFile: "ui5-serve.yaml"

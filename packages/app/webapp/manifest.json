@@ -27,7 +27,7 @@
 			  "subTitle": "UI5 CAP",
 			  "icon": "sap-icon://course-book"
 			}
-		},
+		}},
 		"dataSources": {
 			"mainService": {
 				"uri": "/admin/",

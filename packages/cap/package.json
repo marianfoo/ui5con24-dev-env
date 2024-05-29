@@ -37,7 +37,9 @@
       },
       "db": {
         "kind": "sqlite",
-        "url": "db.sqlite"
+        "credentials": {
+          "database": "db/bookshop.db"
+        }
       },
       "auth": "dummy"
     },
@@ -60,8 +62,7 @@
         "ui5con24.component": "./ui5con24.app/ui5con24/component",
         "ui5con24.cc.Control": "./ui5con24.app/resources/ui5con24/cc/Control",
         "cc.spreadsheetimporter.v0_34_1": "./ui5con24.app.abap/resources/cc/spreadsheetimporter/v0_34_1/"
-
-    }
+      }
     }
   },
   "imports": {

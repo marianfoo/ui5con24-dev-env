@@ -99,6 +99,9 @@ importers:
       ui5-middleware-ui5:
         specifier: 3.1.4
         version: 3.1.4
+      ui5-task-zipper:
+        specifier: ^3.1.4
+        version: 3.1.4
       ui5-tooling-modules:
         specifier: 3.5.6
         version: 3.5.6(typescript@5.4.5)
@@ -187,9 +190,6 @@ importers:
       ui5-middleware-ui5:
         specifier: 3.1.4
         version: 3.1.4
-      ui5-task-zipper:
-        specifier: ^3.1.4
-        version: 3.1.4
       ui5-tooling-modules:
         specifier: 3.5.6
         version: 3.5.6(typescript@5.4.5)
@@ -228,9 +228,8 @@ importers:
         specifier: ^1.7.0
         version: 1.7.0(@sap/cds@7.9.0(express@4.19.2))
       cds-launchpad-plugin:
-<<<<<<< HEAD
         specifier: 2.2.0
-        version: 2.2.0(@sap/cds-dk@7.9.1)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2)
+        version: 2.2.0(@sap/cds-dk@7.9.2)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2)
       cds-plugin-ui5:
         specifier: ^0.8.3
         version: 0.8.3(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2)
@@ -243,13 +242,6 @@ importers:
       ui5con24.app.abap:
         specifier: workspace:*
         version: link:../app_abap
-=======
-        specifier: 2.1.8
-        version: 2.1.8(@sap/cds-dk@7.9.2)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2)
-      cds-plugin-ui5:
-        specifier: ^0.8.3
-        version: 0.8.3(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2)
->>>>>>> main
 
   packages/component:
     devDependencies:
@@ -1752,6 +1744,7 @@ packages:
   '@sap/xssec@3.6.1':
     resolution: {integrity: sha512-OJouwIWClefpsJ8rVCziEydeDHDNOMA4hjsjw9OqolbbObaiYMMDRU0YJbPe7XL5JkLgrtt+CLCBCsNERxcCZg==}
     engines: {node: '>=14'}
+
   '@sapui5/ts-types-esm@1.108.30':
     resolution: {integrity: sha512-Do3iq3j+sUpUdMvxC3eg6RQ5/upMzFi3+uJInxaHoYQRzN6iBKuN/bju1dWLdMQ19InJOunIatH7NOE3wzr0Og==}
 
@@ -2082,6 +2075,7 @@ packages:
     resolution: {integrity: sha512-k49q5D7EBk4vGzpM81KDNyGL4YaB12v8qYNqR7/5f4xoAksotf7h3VeAjCmJFSttEOnC9LNb9GYTzJAWJoCv7w==}
     engines: {node: '>= 8.5', npm: '>= 5'}
     deprecated: 'UI5 Tooling version 1 and below are out of maintenance. Migrate your project to the latest version: https://sap.github.io/ui5-tooling/stable/'
+
   '@ui5/logger@2.0.1':
     resolution: {integrity: sha512-FU5moQF9HATZEIJVQxXWRsUKMveIRJNPSmH3Mptcuc05f6gKu1BWcamDaDHXmMSyoKRounY9Aok94NTQMi7eDw==}
     engines: {node: '>= 10', npm: '>= 5'}
@@ -3796,7 +3790,6 @@ packages:
 
   glob@7.1.7:
     resolution: {integrity: sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ==}
-    deprecated: Glob versions prior to v9 are no longer supported
 
   glob@7.2.0:
     resolution: {integrity: sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==}
@@ -5819,7 +5812,6 @@ packages:
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
-    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rimraf@5.0.7:
@@ -6446,10 +6438,11 @@ packages:
   ui5-middleware-ui5@3.1.4:
     resolution: {integrity: sha512-0kbTA0GC19UUyGC2ahgbGWVqkutwHMzstxgnI6nUpnVtIebE8cyD1jOzQV4vwcAvxNXdM68eghxHK4OLPXx+Rg==}
 
-  ui5-task-zipper@3.1.4:
-    resolution: {integrity: sha512-OUCvVegxqU2ftrKDELu2Jz377Q1LIzhHFlfwcvAN6iHHTENFewFuIa+CA70znYTfAIq4ojB5se9eM1Hy6L/C7w==}
   ui5-task-flatten-library@0.2.5:
     resolution: {integrity: sha512-oHT+NQeP1GdJTddBtbq77Uv8KLocSLblwoVuNIVkE3v3/397SbWndguhcGWegXlo0BpD5hl9zMXcN9TnflyTfw==}
+
+  ui5-task-zipper@3.1.4:
+    resolution: {integrity: sha512-OUCvVegxqU2ftrKDELu2Jz377Q1LIzhHFlfwcvAN6iHHTENFewFuIa+CA70znYTfAIq4ojB5se9eM1Hy6L/C7w==}
 
   ui5-tooling-modules@3.5.4:
     resolution: {integrity: sha512-dMKu3WyFDlb3naTNhYnNhXKhdwT0o9nFgvEJ1BT5KLnUvKKfmoO5L0BSihKu8jZQjXUP0+nhbBrS42mXs8vbVw==}
@@ -8676,6 +8669,7 @@ snapshots:
       node-rsa: 1.1.1
     transitivePeerDependencies:
       - supports-color
+
   '@sapui5/ts-types-esm@1.108.30':
     dependencies:
       '@types/jquery': 3.5.13
@@ -9122,6 +9116,9 @@ snapshots:
       random-int: 3.0.0
 
   '@ui5/logger@1.0.2':
+    dependencies:
+      npmlog: 4.1.2
+
   '@ui5/logger@2.0.1':
     dependencies:
       npmlog: 4.1.2
@@ -9884,11 +9881,7 @@ snapshots:
     dependencies:
       lodash: 4.17.21
 
-<<<<<<< HEAD
-  cds-launchpad-plugin@2.2.0(@sap/cds-dk@7.9.1)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2):
-=======
-  cds-launchpad-plugin@2.1.8(@sap/cds-dk@7.9.2)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2):
->>>>>>> main
+  cds-launchpad-plugin@2.2.0(@sap/cds-dk@7.9.2)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2):
     dependencies:
       '@sap/cds': 7.9.0(express@4.19.2)
       '@sap/cds-dk': 7.9.2
@@ -14325,12 +14318,13 @@ snapshots:
       - bluebird
       - supports-color
 
-  ui5-task-zipper@3.1.4:
-    dependencies:
-      yazl: 2.5.1
   ui5-task-flatten-library@0.2.5:
     dependencies:
       '@ui5/logger': 2.0.1
+
+  ui5-task-zipper@3.1.4:
+    dependencies:
+      yazl: 2.5.1
 
   ui5-tooling-modules@3.5.4(typescript@5.4.5):
     dependencies:

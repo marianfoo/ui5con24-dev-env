@@ -21,6 +21,7 @@
     "build": "ui5 build --config=ui5-build.yaml --all --clean-dest --dest dist",
     "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo",
     "gen-types": "npx @ui5/ts-interface-generator",
+    "setup": "cds deploy --to sqlite:db/bookshop.db",
     "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml -y"
   },
   "devDependencies": {
