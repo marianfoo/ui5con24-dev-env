@@ -19,6 +19,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "ui5 build --config=ui5-build.yaml --all --clean-dest --dest dist",
+    "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo",
     "gen-types": "npx @ui5/ts-interface-generator"
   },
   "devDependencies": {
@@ -44,6 +45,7 @@
     "replace-in-file": "^7.1.0",
     "shelljs": "^0.8.5",
     "typescript": "5.4.5",
+    "ui5-task-zipper": "^3.1.4",
     "ui5-tooling-modules": "3.5.4",
     "ui5-tooling-stringreplace": "3.2.1",
     "ui5-tooling-transpile": "3.4.0"

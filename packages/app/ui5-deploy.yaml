@@ -1,0 +1,34 @@
+specVersion: "3.0"
+metadata:
+  name: ui5con24.app
+type: application
+framework:
+  name: SAPUI5
+  version: "1.120.13"
+resources:
+  configuration:
+    propertiesFileSourceEncoding: UTF-8
+builder:
+  resources:
+    excludes:
+      - "/test/**"
+      - "/localService/**"
+  customTasks:
+  - name: webide-extension-task-updateManifestJson
+    afterTask: replaceVersion
+    configuration:
+      appFolder: webapp
+      destDir: dist
+  - name: ui5-task-zipper
+    afterTask: generateCachebusterInfo
+    configuration:
+      archiveName: ui5con24app
+      additionalFiles:
+      - xs-app.json
+  - name: ui5-tooling-transpile-task
+    afterTask: replaceVersion
+    configuration:
+      debug: true
+      removeConsoleStatements: true
+      transpileAsync: true
+      transpileTypeScript: true 

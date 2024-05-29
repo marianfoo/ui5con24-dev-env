@@ -1,0 +1,32 @@
+specVersion: "3.0"
+metadata:
+  name: ui5con24.lib
+type: application
+framework:
+  name: SAPUI5
+  version: "1.120.13"
+resources:
+  configuration:
+    paths:
+      webapp: src
+    propertiesFileSourceEncoding: UTF-8
+builder:
+  resources:
+    excludes:
+      - "/test/**"
+      - "/localService/**"
+  customTasks:
+  - name: ui5-tooling-transpile-task
+    afterTask: replaceVersion
+    configuration:
+      filePattern: .+(ts|tsx)
+      transpileTypeScript: true
+      transpileAsync: false
+      generateDts: true
+      removeConsoleStatements: true
+  - name: ui5-task-zipper
+    afterTask: generateCachebusterInfo
+    configuration:
+      archiveName: ui5con24lib
+      additionalFiles:
+      - xs-app.json

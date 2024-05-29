@@ -1,6 +1,9 @@
 {
 	"_version": "1.12.0",
-
+	"sap.cloud": {
+		"public": true,
+		"service": "recap"
+	},
 	"sap.app": {
 		"id": "ui5con24.app",
 		"type": "application",
@@ -11,30 +14,30 @@
 			"version": "${version}"
 		},
 		"crossNavigation": {
-		  "inbounds": {
-			"intent1": {
-			  "signature": {
-				"parameters": {},
-				"additionalParameters": "allowed"
-			  },
-			  "semanticObject": "ui5con24",
-			  "action": "120",
-			  "title": "UI5con 24",
-			  "info": "",
-			  "subTitle": "UI5 1.120",
-			  "icon": "sap-icon://course-book"
+			"inbounds": {
+				"intent1": {
+					"signature": {
+						"parameters": {},
+						"additionalParameters": "allowed"
+					},
+					"semanticObject": "ui5con24",
+					"action": "demo",
+					"title": "UI5con 24",
+					"info": "",
+					"subTitle": "UI5 1.120",
+					"icon": "sap-icon://course-book"
+				}
 			}
-		  }
 		},
 		"dataSources": {
-		  "mainService": {
-			"uri": "/admin/",
-			"type": "OData",
-			"settings": {
-			  "annotations": [],
-			  "odataVersion": "4.0"
+			"mainService": {
+				"uri": "/admin/",
+				"type": "OData",
+				"settings": {
+					"annotations": [],
+					"odataVersion": "4.0"
+				}
 			}
-		  }
 		}
 	},
 
@@ -64,22 +67,22 @@
 				"sap.m": {},
 				"ui5con24.lib": {}
 			},
-			"components":{
+			"components": {
 				"ui5con24.component": {}
 			}
 		},
 
 		"componentUsages": {
 			"ui5con24component": {
-			  "name": "ui5con24.component"
+				"name": "ui5con24.component"
 			},
 			"spreadsheetImporter": {
 				"name": "cc.spreadsheetimporter.v0_34_1"
 			}
-		  },
-		  "resourceRoots": {
+		},
+		"resourceRoots": {
 			"ui5con24.component": "./ui5con24/component/"
-		  },
+		},
 
 		"handleValidation": true,
 
@@ -93,12 +96,12 @@
 				"dataSource": "mainService",
 				"preload": true,
 				"settings": {
-				  "synchronizationMode": "None",
-				  "operationMode": "Server",
-				  "autoExpandSelect": true,
-				  "earlyRequests": true
+					"synchronizationMode": "None",
+					"operationMode": "Server",
+					"autoExpandSelect": true,
+					"earlyRequests": true
 				}
-			  },
+			},
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {

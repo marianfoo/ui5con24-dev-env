@@ -2,10 +2,10 @@
   "_version": "1.9.0",
   "sap.cloud": {
     "public": true,
-    "service": "ui5con24component"
+    "service": "recap"
   },
   "sap.app": {
-    "id": "ui5con24-component",
+    "id": "ui5con24.component",
     "type": "component",
     "i18n": "i18n/i18n.properties",
     "title": "{{title}}",

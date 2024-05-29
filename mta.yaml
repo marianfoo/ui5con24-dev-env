@@ -1,0 +1,179 @@
+_schema-version: "3.1"
+ID: ui5con24-dev-env
+description: UI5con demo CAP project.
+version: 1.0.0
+modules:
+- name: ui5con24-dev-env-srv
+  type: nodejs
+  path: packages/cap/gen/srv
+  requires:
+  - name: ui5con24-dev-env-db
+  - name: ui5con24-dev-env-destination-service
+  - name: ui5con24-dev-env-connectivity-service
+  - name: ui5con24-dev-env-xsuaa-srv
+  provides:
+  - name: srv-api
+    properties:
+      srv-url: ${default-url}
+  parameters:
+    buildpack: nodejs_buildpack
+  build-parameters:
+    builder: npm
+- name: ui5con24-dev-env-db-deployer
+  type: hdb
+  path: packages/cap/gen/db
+  requires:
+  - name: ui5con24-dev-env-db
+  parameters:
+    buildpack: nodejs_buildpack
+- name: ui5con24-dev-env_ui_deployer
+  type: com.sap.application.content
+  path: packages
+  requires:
+  - name: ui5con24-dev-env_html_repo_host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - ui5con24app.zip
+      name: ui5con24app
+      target-path: resources/
+    - artifacts:
+      - ui5con24component.zip
+      name: ui5con24component
+      target-path: resources/
+    - artifacts:
+      - ui5con24lib.zip
+      name: ui5con24lib
+      target-path: resources/
+- name: ui5con24app
+  type: html5
+  path: packages/app
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - pnpm --filter ui5con24.app install
+    - pnpm --filter ui5con24.app build:cf
+    supported-platforms: []
+- name: ui5con24component
+  type: html5
+  path: packages/component
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - pnpm --filter ui5con24.component install
+    - pnpm --filter ui5con24.component build:cf
+    supported-platforms: []
+- name: ui5con24lib
+  type: html5
+  path: packages/library
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - pnpm --filter ui5con24.lib install
+    - pnpm --filter ui5con24.lib build:cf
+    supported-platforms: []
+- name: ui5con24-dev-env-dest-content
+  type: com.sap.application.content
+  requires:
+    - name: ui5con24-dev-env-destination-service
+      parameters:
+        content-target: true
+    - name: ui5con24-dev-env_html_repo_host
+      parameters:
+        service-key:
+          name: ui5con24-dev-env_html_repo_host-key
+    - name: ui5con24-dev-env-xsuaa-srv
+      parameters:
+        service-key:
+          name: ui5con24-dev-env-xsuaa-srv-key
+  parameters:
+    content:
+      instance:
+        destinations:
+          - Name: ui5con24_repo_host
+            ServiceInstanceName: ui5con24-dev-env_html_repo_host
+            ServiceKeyName: ui5con24-dev-env_html_repo_host-key
+            sap.cloud.service: recap
+          - Authentication: OAuth2UserTokenExchange
+            Name: ui5con24_uaa
+            ServiceInstanceName: ui5con24-dev-env-xsuaa-srv
+            ServiceKeyName: ui5con24-dev-env-xsuaa-srv-key
+            sap.cloud.service: recap
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
+resources:
+- name: ui5con24-dev-env-xsuaa-srv
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      xsappname: ${space}-ui5con24-dev-env
+      tenant-mode: dedicated
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: ui5con24-dev-env-xsuaa-srv
+    service-plan: application
+- name: ui5con24-dev-env-db
+  type: com.sap.xs.hdi-container
+  parameters:
+    service: hana
+    service-plan: hdi-shared
+- name: ui5con24-dev-env_html_repo_runtime
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-runtime
+- name: ui5con24-dev-env_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-host
+- name: ui5con24-dev-env-connectivity-service
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: connectivity
+    service-plan: lite
+- name: ui5con24-dev-env-destination-service
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: true
+      init_data:
+        instance:
+          destinations:
+          - Authentication: NoAuthentication
+            HTML5.DynamicDestination: true
+            HTML5.ForwardAuthToken: true
+            Name: srv-api
+            ProxyType: Internet
+            Type: HTTP
+            URL: ~{srv-api/srv-url}
+          - Authentication: NoAuthentication
+            Name: ui5
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://ui5.sap.com
+          existing_destinations_policy: update
+      version: 1.0.0
+    service: destination
+    service-name: ui5con24-dev-env-destination-service
+    service-plan: lite
+  requires:
+  - name: srv-api
+parameters:
+  deploy_mode: html5-repo
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+  - builder: custom
+    commands:
+    # - npm i
+    - pnpm --filter @capire/bookshop i
+    # - npx -p @sap/cds-dk cds build --production
+    - pnpm --filter @capire/bookshop build

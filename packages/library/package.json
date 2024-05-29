@@ -8,6 +8,7 @@
 	"scripts": {
 		"clean": "rimraf dist coverage",
 		"build": "ui5 build --clean-dest",
+		"build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo",
 		"build:ts-interfaces": "npx @ui5/ts-interface-generator",
 		"start": "ui5 serve -o test-resources/my/bookshop/lib/Example.html",
 		"start:dist": "npm start -- --config ui5-dist.yaml",
@@ -35,6 +36,7 @@
 		"rimraf": "^5.0.7",
 		"typescript": "^5.4.5",
 		"ui5-middleware-livereload": "^3.0.3",
+		"ui5-task-zipper": "^3.1.4",
 		"ui5-tooling-transpile": "^3.4.0"
 	}
 }
