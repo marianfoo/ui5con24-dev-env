@@ -1,0 +1,136 @@
+{
+	"_version": "1.12.0",
+
+	"sap.app": {
+		"id": "ui5con24.app.abap",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "${version}"
+		},
+		"crossNavigation": {
+		  "inbounds": {
+			"intent1": {
+			  "signature": {
+				"parameters": {},
+				"additionalParameters": "allowed"
+			  },
+			  "semanticObject": "ui5con24",
+			  "action": "120",
+			  "title": "UI5con 24",
+			  "info": "",
+			  "subTitle": "UI5 1.120",
+			  "icon": "sap-icon://course-book"
+			}
+		  }
+		},
+		"dataSources": {
+			"mainService": {
+			  "uri": "/sap/opu/odata/dmo/UI_TRAVEL_U_V2/",
+			  "type": "OData",
+			  "settings": {
+				"annotations": [],
+				"localUri": "localService/metadata.xml",
+				"odataVersion": "2.0"
+			  }
+			}
+		  }
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"fullWidth": true
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "ui5con24.app.abap.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+
+		"dependencies": {
+			"minUI5Version": "1.120.14",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"ui5con24.lib.abap": {}
+			},
+			"components":{
+				"ui5con24.component": {},
+				"cc.spreadsheetimporter.v0_34_1": {}
+			}
+		},
+
+		"componentUsages": {
+			"ui5con24component": {
+			  "name": "ui5con24.component"
+			},
+			"spreadsheetImporter": {
+				"name": "cc.spreadsheetimporter.v0_34_1"
+			}
+		  },
+
+		"handleValidation": true,
+
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+
+		"models": {
+			"": {
+				"dataSource": "mainService",
+				"preload": true,
+				"settings": {}
+			  },
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "ui5con24.app.abap.i18n.i18n"
+				}
+			}
+		},
+
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "ui5con24.app.abap.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "main",
+					"target": "main"
+				}
+			],
+			"targets": {
+				"main": {
+					"viewId": "main",
+					"viewName": "Main"
+				}
+			}
+		}
+	}
+}

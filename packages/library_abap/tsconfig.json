@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"target": "es2022",
+		"module": "es2022",
+		"moduleResolution": "node",
+		"skipLibCheck": true,
+		"allowJs": true,
+		"strict": true,
+		"strictNullChecks": false,
+		"strictPropertyInitialization": false,
+		"rootDir": "./",
+		"types": ["@sapui5/ts-types-esm", "@types/jquery", "@types/qunit"],
+		"paths": {
+			"ui5con24/lib/abap/*": ["./src/*"]
+		}
+	},
+	"include": ["./src/**/*", "./test/**/*"]
+}

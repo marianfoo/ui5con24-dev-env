@@ -2,6 +2,17 @@
 
 This repository showcases a advanced development environment for UI5 and CAP projects.
 
+## Current used packages
+
+- ui5-middleware-livereload
+- ui5-middleware-serveframework
+- ui5-middleware-simpleproxy
+- ui5-middleware-ui5
+- ui5-tooling-modules
+- ui5-tooling-transpile
+- cds-launchpad-plugin
+- cds-plugin-ui5
+
 ## TODO
 
 - [ ] Add CAP deployment @lemaiwo
@@ -13,18 +24,45 @@ This repository showcases a advanced development environment for UI5 and CAP pro
 - [ ] add external npm Package to App
 - [ ] add external npm Package to Library
 - [ ] add external npm Package to Component
-- [ ] duplicate UI5 App with UI5 1.108 and OData V2
+- [X] duplicate UI5 App with UI5 1.108 and OData V2
 
 ## current setup
 
 ```mermaid
 
+
 flowchart TD
-    remoteComponent(remote Component) -->UI5App1
-    localComponent(local Component) -->UI5App1
-    Library -->UI5App1(UI5 App 1.108 V2)
-    UI5App1 --> CAP{CAP server}
-    CAP -->FLP[local Fiori Launchpad]
+    subgraph abap [ABAP Trial 2022]
+      ComponentExt(Component from ABAP Stack)
+      ODataV2(OData V2 Service)
+    end
+    subgraph local [Local Development]
+      subgraph deps [Dependencies]
+        Library
+        localComponent
+      end
+      subgraph apps [Apps]
+        UI5App1
+        UI5AppABAP
+      end
+      subgraph CAP
+        CAPServer
+        FLP
+      end
+      ComponentExt --> UI5AppABAP
+      localComponent(Component) -->UI5AppABAP
+      localComponent(Component) -->UI5App1
+      Library -->UI5App1(UI5 App V4)
+      Library -->UI5AppABAP(UI5 App V2)
+      CAPServer --> |OData V4| UI5App1
+      ODataV2 --> |OData V2| UI5AppABAP
+      CAPServer -->FLP[local Fiori Launchpad]
+      UI5App1 -->FLP
+      UI5AppABAP -->FLP
+    end
+    subgraph btp [BTP]
+    end
+
 
 ```
 

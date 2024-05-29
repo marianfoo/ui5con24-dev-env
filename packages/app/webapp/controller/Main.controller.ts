@@ -14,20 +14,6 @@ export default class Main extends BaseController {
 		// this.getView().addContent(example);
 	}
 
-	public async openSpreadsheetImporter(): Promise<void> {
-		const spreadsheetUpload = await this.getView()
-		.getController()
-		.getOwnerComponent()
-		.createComponent({
-		  usage: "spreadsheetImporter",
-		  async: true,
-		  componentData: {
-			context: this,
-		  },
-		});
-	  	spreadsheetUpload.openSpreadsheetUploadDialog();
-	}
-
 	public sayHello(): void {
 		MessageBox.show("Hello World!");
 		

@@ -1,0 +1,49 @@
+<mvc:View controllerName="ui5con24.app.abap.controller.Main" displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:example="ui5con24.lib.abap" core:require="{
+		formatter: 'ui5con24/app/abap/model/formatter'
+	}">
+
+	<Page title="{i18n>appTitle}" id="page">
+		<content>
+			<VBox>
+				<Label text="Remote ABAP Component" class="customLabel"/>
+				<HBox class="customHBox">
+					<Button text="open Spreadsheet Imporert" press="openSpreadsheetImporter" />
+				</HBox>
+				<Label text="Library" class="customLabel"/>
+				<HBox class="customHBox">
+					<example:Example text="This is the Library"/>
+				</HBox>
+				<Label text="Local Component" class="customLabel"/>
+				<HBox class="customHBox">
+					<core:ComponentContainer id="test" width="100%" usage="ui5con24component" propagateModel="true" async="true" />
+				</HBox>
+				<Label text="Data ABAP" class="customLabel"/>
+				<HBox class="customHBox">
+					<Table id="table" items="{/Booking}">
+						<columns>
+							<Column>
+								<Label text="Title"/>
+							</Column>
+							<Column>
+								<Label text="Author"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{CustomerName}"/>
+									<Text text="{CarrierName}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+
+</mvc:View>

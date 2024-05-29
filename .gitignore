@@ -4,3 +4,6 @@ gen/
 *.d.ts
 dist/
 *.mtar
+packages/test
+archive.zip
+dist

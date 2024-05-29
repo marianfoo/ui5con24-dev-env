@@ -1,0 +1,18 @@
+specVersion: "3.2"
+metadata:
+  name: ui5con24.app
+type: application
+builder:
+  resources:
+    excludes:
+      # When defining absolute paths, make sure to specify the namespace plus the "/resources/" prefix
+      - "/resources/ui5con24/component/**"
+      - "/ui5con24/component/**"
+      - "/test-resources/**"
+      - "/resources/ui5con24/lib/**"
+      - "ui5con24.component"
+      - "ui5con24-component"
+      - "ui5con24component"
+  customTasks:
+    - name: ui5-tooling-transpile-task
+      afterTask: replaceVersion

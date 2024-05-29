@@ -46,7 +46,7 @@
     },
     "launchpad": {
       "theme": "sap_horizon",
-      "version": "1.120.12",
+      "version": "1.120.14",
       "modulePaths": {
         "ui5con24.lib": "./ui5con24.app/resources/ui5con24/lib",
         "test": "./adsfasf"

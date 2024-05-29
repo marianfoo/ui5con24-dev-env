@@ -11,7 +11,7 @@ customConfiguration:
     mountPath: /ui5con24/component/
 framework:
   name: SAPUI5
-  version: 1.120.12
+  version: 1.120.14
   libraries:
     - name: sap.m
     - name: sap.ui.core

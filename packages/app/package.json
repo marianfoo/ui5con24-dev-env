@@ -6,9 +6,10 @@
 	"license": "Apache-2.0",
 	"scripts": {
 		"clean": "rimraf dist coverage",
-		"build": "ui5 build --clean-dest",
+		"build": "ui5 build --config ui5-build.yaml --include-dependency 'ui5-cc-ui5con24.cc' --clean-dest",
 		"build:opt": "ui5 build self-contained --clean-dest --all",
 		"start": "ui5 serve --port 8080 -o index.html",
+		"start:silent": "ui5 serve --port 8080",
 		"start-cdn": "ui5 serve --port 8080 -o index-cdn.html",
 		"start:dist": "npm start -- --config ui5-dist.yaml",
 		"start:dist-cdn": "npm run start-cdn -- --config ui5-dist.yaml",
@@ -19,13 +20,16 @@
 		"karma-ci-cov": "karma start karma-ci-cov.conf.js",
 		"test": "npm run lint && npm run karma-ci-cov",
 		"wdi5": "wdio run ./webapp/test/e2e/wdio.conf.ts",
-        "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo"
+        "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo",
+		"deploy": "npm run build && fiori deploy --config ui5-deploy.yaml -y"
 	},
 	"dependencies": {
+		"ui5con24.lib": "workspace:*",
 		"ui5con24.component": "workspace:*",
-		"ui5con24.lib": "workspace:*"
+		"ui5-cc-ui5con24.cc": "workspace:*"
 	},
 	"devDependencies": {
+		"@sap/ux-ui5-tooling": "1.13.5",
 		"@openui5/types": "^1.123.1",
 		"@sap/ui5-builder-webide-extension": "^1.1.9",
 		"@sapui5/types": "1.123.1",

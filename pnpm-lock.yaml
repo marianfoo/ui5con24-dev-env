@@ -17,6 +17,9 @@ importers:
 
   packages/app:
     dependencies:
+      ui5-cc-ui5con24.cc:
+        specifier: workspace:*
+        version: link:../control
       ui5con24.component:
         specifier: workspace:*
         version: link:../component
@@ -30,6 +33,97 @@ importers:
       '@sap/ui5-builder-webide-extension':
         specifier: ^1.1.9
         version: 1.1.9
+      '@sap/ux-ui5-tooling':
+        specifier: 1.13.5
+        version: 1.13.5(encoding@0.1.13)
+      '@sapui5/types':
+        specifier: 1.123.1
+        version: 1.123.1
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^7.8.0
+        version: 7.8.0(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
+      '@typescript-eslint/parser':
+        specifier: ^7.8.0
+        version: 7.8.0(eslint@8.57.0)(typescript@5.4.5)
+      '@ui5/cli':
+        specifier: ^3.10.1
+        version: 3.10.1(bluebird@3.7.2)
+      '@wdio/cli':
+        specifier: ^8.36.1
+        version: 8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5)
+      '@wdio/local-runner':
+        specifier: ^8.36.1
+        version: 8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5)
+      '@wdio/mocha-framework':
+        specifier: ^8.36.1
+        version: 8.36.1
+      '@wdio/spec-reporter':
+        specifier: ^8.36.1
+        version: 8.36.1
+      eslint:
+        specifier: ^8.56.0
+        version: 8.57.0
+      karma:
+        specifier: ^6.4.3
+        version: 6.4.3
+      karma-chrome-launcher:
+        specifier: ^3.2.0
+        version: 3.2.0
+      karma-coverage:
+        specifier: ^2.2.1
+        version: 2.2.1
+      karma-ui5:
+        specifier: ^3.0.4
+        version: 3.0.4(karma@6.4.3)
+      karma-ui5-transpile:
+        specifier: ^3.4.0
+        version: 3.4.0(karma@6.4.3)(ui5-tooling-transpile@3.4.0(@ui5/ts-interface-generator@0.8.2(typescript@5.4.5)))
+      rimraf:
+        specifier: ^5.0.7
+        version: 5.0.7
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.12.11)(typescript@5.4.5)
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+      ui5-middleware-livereload:
+        specifier: ^3.0.3
+        version: 3.0.3
+      ui5-middleware-serveframework:
+        specifier: 3.1.1
+        version: 3.1.1(encoding@0.1.13)
+      ui5-middleware-simpleproxy:
+        specifier: 3.2.15
+        version: 3.2.15
+      ui5-middleware-ui5:
+        specifier: 3.1.4
+        version: 3.1.4
+      ui5-tooling-modules:
+        specifier: 3.5.6
+        version: 3.5.6(typescript@5.4.5)
+      ui5-tooling-transpile:
+        specifier: ^3.4.0
+        version: 3.4.0(@ui5/ts-interface-generator@0.8.2(typescript@5.4.5))
+      wdio-ui5-service:
+        specifier: ^2.0.7
+        version: 2.0.7(@wdio/cli@8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5))(@wdio/local-runner@8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5))(@wdio/mocha-framework@8.36.1)(@wdio/spec-reporter@8.36.1)(@wdio/types@8.36.1)(encoding@0.1.13)(typescript@5.4.5)(webdriverio@8.36.1(devtools@8.36.1(encoding@0.1.13)(typescript@5.4.5))(encoding@0.1.13)(typescript@5.4.5))
+
+  packages/app_abap:
+    dependencies:
+      ui5con24.component:
+        specifier: workspace:*
+        version: link:../component
+      ui5con24.lib.abap:
+        specifier: workspace:*
+        version: link:../library_abap
+    devDependencies:
+      '@openui5/types':
+        specifier: ^1.123.1
+        version: 1.123.1
+      '@sap/ux-ui5-tooling':
+        specifier: '1'
+        version: 1.13.3(encoding@0.1.13)
       '@sapui5/types':
         specifier: 1.123.1
         version: 1.123.1
@@ -232,6 +326,9 @@ importers:
 
   packages/library:
     devDependencies:
+      '@sap/ux-ui5-tooling':
+        specifier: 1.13.5
+        version: 1.13.5(encoding@0.1.13)
       '@sapui5/types':
         specifier: 1.123.1
         version: 1.123.1
@@ -283,6 +380,75 @@ importers:
       ui5-tooling-transpile:
         specifier: ^3.4.0
         version: 3.4.0(@ui5/ts-interface-generator@0.8.2(typescript@5.4.5))
+
+  packages/library_abap:
+    devDependencies:
+      '@sapui5/ts-types-esm':
+        specifier: 1.108.30
+        version: 1.108.30
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^6.20.0
+        version: 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
+      '@typescript-eslint/parser':
+        specifier: ^6.20.0
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.5)
+      '@ui5/cli':
+        specifier: ^3.9.0
+        version: 3.10.1(bluebird@3.7.2)
+      '@ui5/ts-interface-generator':
+        specifier: ^0.8.1
+        version: 0.8.2(typescript@5.4.5)
+      eslint:
+        specifier: ^8.56.0
+        version: 8.57.0
+      karma:
+        specifier: ^6.4.2
+        version: 6.4.3
+      karma-chrome-launcher:
+        specifier: ^3.2.0
+        version: 3.2.0
+      karma-coverage:
+        specifier: ^2.2.1
+        version: 2.2.1
+      karma-ui5:
+        specifier: ^3.0.4
+        version: 3.0.4(karma@6.4.3)
+      karma-ui5-transpile:
+        specifier: ^3.3.3
+        version: 3.4.0(karma@6.4.3)(ui5-tooling-transpile@3.4.0(@ui5/ts-interface-generator@0.8.2(typescript@5.4.5)))
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      rimraf:
+        specifier: ^5.0.5
+        version: 5.0.7
+      typescript:
+        specifier: ^5.3.3
+        version: 5.4.5
+      ui5-middleware-livereload:
+        specifier: ^3.0.2
+        version: 3.0.3
+      ui5-tooling-transpile:
+        specifier: ^3.3.3
+        version: 3.4.0(@ui5/ts-interface-generator@0.8.2(typescript@5.4.5))
+
+  packages/test:
+    devDependencies:
+      '@sap-ux/ui5-middleware-fe-mockserver':
+        specifier: '2'
+        version: 2.2.42
+      '@sap/ux-ui5-tooling':
+        specifier: '1'
+        version: 1.13.3(encoding@0.1.13)
+      '@ui5/cli':
+        specifier: ^3.0.0
+        version: 3.10.1(bluebird@3.7.2)
+      rimraf:
+        specifier: ^3.0.2
+        version: 3.0.2
+      ui5-task-flatten-library:
+        specifier: 0.2.5
+        version: 0.2.5
 
 packages:
 
@@ -915,6 +1081,12 @@ packages:
     peerDependencies:
       '@sap/cds': '>=7.6'
 
+  '@chevrotain/types@9.1.0':
+    resolution: {integrity: sha512-3hbCD1CThkv9gnaSIPq0GUXwKni68e0ph6jIHwCvcWiQ4JB2xi8bFxBain0RF04qHUWuDjgnZLj4rLgimuGO+g==}
+
+  '@chevrotain/utils@9.1.0':
+    resolution: {integrity: sha512-llLJZ8OAlZrjGlBvamm6Zdo/HmGAcCLq5gx7cSwUX8No+n/8ip+oaC4x33IdZIif8+Rh5dQUIZXmfbSghiOmNQ==}
+
   '@colors/colors@1.5.0':
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
     engines: {node: '>=0.1.90'}
@@ -1361,23 +1533,51 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@sap-ux/adp-tooling@0.10.5':
+    resolution: {integrity: sha512-xmfNueO9TyhuCGJy1WSocykOUrGM1LJ+rb+EdLUOw06oF/dQD1MeRg9XfO3PU47I8cXIFILuYwpqJoZyzjfXQg==}
+    engines: {node: '>=18.x'}
+
   '@sap-ux/adp-tooling@0.9.11':
     resolution: {integrity: sha512-3sCK8BgBlXtzhQIE4gvH/9vwddNT0j3J2n3XbkZC+ZZ5U9zV5kWvQq4SrOns9hNFzNf0zLWjweSBNo5g59ZhxA==}
     engines: {node: '>=18.x'}
 
+  '@sap-ux/annotation-converter@0.8.13':
+    resolution: {integrity: sha512-OYNLaUNyOzWdb2W55Vv6whrKhRp6fg74XQ9AOSgkYBCpJRSLnNZxl+CZmEFAxvwwIuALGrSU7YMXfdhlRh5TLA==}
+
   '@sap-ux/axios-extension@1.11.6':
     resolution: {integrity: sha512-9w87YnHAZF5TLJ+3wmVWBkFnGeDwZ5I65jq9gPs49EmD6TjuOKuUuF0zFSsBh3OVS+m57o004K65HQP6VaXzmA==}
+    engines: {node: '>=18.x'}
+
+  '@sap-ux/axios-extension@1.12.3':
+    resolution: {integrity: sha512-Focafp+S2iw0dSKsB9iWk4GX85GZ1kdU5S56MK3I1NJ0bnplHihaJT31R9xKIrpTqw6qnfCsuEo4HnE61yEhnw==}
     engines: {node: '>=18.x'}
 
   '@sap-ux/btp-utils@0.14.3':
     resolution: {integrity: sha512-rYPjvk2RTgWrbe1s8owcQqx2aDKBku5lWS17CsmsLHW2A+WsXwjglg5I5Qj58891R5P4TbvRvZ97Jz1bLC6gYQ==}
     engines: {node: '>=18.x'}
 
+  '@sap-ux/btp-utils@0.14.4':
+    resolution: {integrity: sha512-CqInWpOg5a71zdpVYuYUMOn+qQFuxDzC5TXlbLEqC+VzrZXQVRRqvCCI4oz0pyivSRWoZi0E9F22eCnpjwTWRQ==}
+    engines: {node: '>=18.x'}
+
   '@sap-ux/control-property-editor@0.4.17':
     resolution: {integrity: sha512-7QwmtmY6SjpNjBZ2lQuOzf3pMd0FBtNlzc4VfqqMtiKegVeTvosZWpNw/6JuZf/vrfh3a3IeV75SPYhlN+heTw==}
 
+  '@sap-ux/control-property-editor@0.4.20':
+    resolution: {integrity: sha512-C63uX9GPZJr6EtBuCotaoBe3y8WhmVi3oW/HzHAdcMxrTbzGRUq8vK8AEfnddT7l3AWZjnB0uZA9GTAPv2WLeg==}
+
+  '@sap-ux/edmx-parser@0.7.1':
+    resolution: {integrity: sha512-1oRIOEkwlpTBveo+9GOMGLKO9Dcyr/4jcBkUL08SKun1TENtg2ab41r+rNWMXbcoKGCpFEEr4ybLDPIgFyeilA==}
+
+  '@sap-ux/fe-mockserver-core@1.2.42':
+    resolution: {integrity: sha512-5d2edE3RGulXFsQY1gmPxgC0yw4aGO8y1A1Wm8l+2ML0RgiIxQFK0xn8vumtkqnz+/lnj6vq4T3Go4Rc7zTG6Q==}
+
   '@sap-ux/i18n@0.0.5':
     resolution: {integrity: sha512-QokArQWK1eTrw0Eoa0vJwNeOZwOluPXDeyJPczMTq3vht3WJNoyEeinb9KhtxgVdBLz/hZGxVMDdqU9TGM0Yqg==}
+    engines: {node: '>=18.x'}
+
+  '@sap-ux/i18n@0.0.6':
+    resolution: {integrity: sha512-FhCkweugj2XhuWZzNHxwzYVNjMuWPCPuFroU+AOqfV2uNl6AXpf07Ni5M7YKqVK5cvcvrkxdVKEAPGnG6RqtZA==}
     engines: {node: '>=18.x'}
 
   '@sap-ux/logger@0.5.1':
@@ -1390,8 +1590,18 @@ packages:
     peerDependencies:
       express: '4'
 
+  '@sap-ux/preview-middleware@0.13.36':
+    resolution: {integrity: sha512-swshUdj6udWC4T9dRKcaZzl7QcQgIb1U/xmRysHBObsohmlMjxTh47Fp5b7gpfu8SlaX6oI23qMj1wOiaK1l+A==}
+    engines: {node: '>=18.x'}
+    peerDependencies:
+      express: '4'
+
   '@sap-ux/project-access@1.19.6':
     resolution: {integrity: sha512-qsa94EeLeKiAGmOhvT43fvatQ35IludXwFH9T2/K2NzkgID5W7RHsMmL9FZ++97DedC/1YUSk/RbGKEuwFlQIg==}
+    engines: {node: '>=18.x'}
+
+  '@sap-ux/project-access@1.20.0':
+    resolution: {integrity: sha512-vr6GLFidqA4/eqKPYekQKdgBSZyh7uc+onROWZZlucUwMFDSpliaVS4FToZTUk3w1JLID/XA1A5I0xMV12EbYw==}
     engines: {node: '>=18.x'}
 
   '@sap-ux/store@0.5.0':
@@ -1402,9 +1612,24 @@ packages:
     resolution: {integrity: sha512-ZDNP5UJEDwpIvqQsM5clT7ZOXT64EA9k0jvlAKaAsKTNwbH2VWWPzYgnDhe/ujMJLUSsFwyhU9v/8NCgwgx8yg==}
     engines: {node: '>=18.x'}
 
+  '@sap-ux/system-access@0.3.27':
+    resolution: {integrity: sha512-TMFvdALaPPFx5p3Ey40EPkouP7nydIBv8xMykdQS+zAQUvA26npul8GVKX0ttwVu2ZD+VyuMYggOBNx/H0LhFg==}
+    engines: {node: '>=18.x'}
+
   '@sap-ux/ui5-config@0.22.1':
     resolution: {integrity: sha512-sgwVx/PvyrwNFGaYXD5KCj4kzPPGLWyrxOK+vKwkVqT9UNbZ3Javk32BxAIlVXDY3TKH8CJvrEaHDSJcR9euhQ==}
     engines: {node: '>=18.x'}
+
+  '@sap-ux/ui5-config@0.22.4':
+    resolution: {integrity: sha512-OytWvOMaVsaNJIrCbrVg3t/S3nxuNHJRWw2FXjk5ST7B+betpxzTlct/lVUblKPptVSrV/TbUqcsck96MtgCGA==}
+    engines: {node: '>=18.x'}
+
+  '@sap-ux/ui5-middleware-fe-mockserver@2.2.42':
+    resolution: {integrity: sha512-qzlOB4gHRUdZ8sKjzJsg5kyW4o6QL7jGi8fqo0KkDkQMBizKc++4h3tEl59yEETpfo57eCCR/xArtH5L65vPgQ==}
+
+  '@sap-ux/vocabularies-types@0.10.12':
+    resolution: {integrity: sha512-gqJXkvURw3MwCsIjs9ppHVYrwm/NRB7hOCugukd3zH5ILSgENsXq/ugPN2/2/+sOC93h6WxBdR7RkuAOY8SRMg==}
+    engines: {node: '>=18.0.0 < 19.0.0 || >=20.0.0 < 21.0.0', pnpm: '>=8'}
 
   '@sap-ux/yaml@0.14.1':
     resolution: {integrity: sha512-8JgrgtJgcJylXciu5dtOlmaZGYt2ZYmXMxwa7HMdM79jxbIBoksJF1Dbx5/W0Y314MpPnBzHUPxmcHBTikYRIg==}
@@ -1495,6 +1720,10 @@ packages:
     resolution: {integrity: sha512-9uZs7b7n4d8DbQ6uV3sGBPmnN2t+uFSfNSLm6oMmKEooG9IT9jrsp1Wr+d2LR2vDCNUbMLXTW1Z/yiQ9ds3YpA==}
     hasBin: true
 
+  '@sap/ux-ui5-tooling@1.13.5':
+    resolution: {integrity: sha512-oruhychehOHo1tQosCzGivI84TlZSBnkUK8hqGkb4z/qI2JzkR9ESNGIU0mWlImk3HX8BuaVxmxSEj/+aF7vTA==}
+    hasBin: true
+
   '@sap/xsenv@4.2.0':
     resolution: {integrity: sha512-Hu74ezPEKVgzz1XLi4/Ttlv+n2w9CTuLBlR6Vw4y9FK7btLm1wnCViDPufTG7yxniEADw8EQbqRv+krmcFmGLA==}
     engines: {node: ^12.0.0 || ^14.0.0 || ^16.0.0 || ^18.0.0 || ^20.0.0}
@@ -1506,6 +1735,8 @@ packages:
   '@sap/xssec@3.6.1':
     resolution: {integrity: sha512-OJouwIWClefpsJ8rVCziEydeDHDNOMA4hjsjw9OqolbbObaiYMMDRU0YJbPe7XL5JkLgrtt+CLCBCsNERxcCZg==}
     engines: {node: '>=14'}
+  '@sapui5/ts-types-esm@1.108.30':
+    resolution: {integrity: sha512-Do3iq3j+sUpUdMvxC3eg6RQ5/upMzFi3+uJInxaHoYQRzN6iBKuN/bju1dWLdMQ19InJOunIatH7NOE3wzr0Og==}
 
   '@sapui5/ts-types-esm@1.123.1':
     resolution: {integrity: sha512-I7+WcOlCeFcJ5/4vU04iaU57NohoFXNxxwXRrWJZ5FayTs2olkPap2B8vnDVESGuCP+1TZGulXa0b3Lj14OBXw==}
@@ -1675,12 +1906,33 @@ packages:
   '@types/yauzl@2.10.3':
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
 
+  '@typescript-eslint/eslint-plugin@6.21.0':
+    resolution: {integrity: sha512-oy9+hTPCUFpngkEZUSzbf9MxI65wbKFoQYsgPdILTfbUldp5ovUuphZVe4i30emU9M/kP+T64Di0mxl7dSw3MA==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      '@typescript-eslint/parser': ^6.0.0 || ^6.0.0-alpha
+      eslint: ^7.0.0 || ^8.0.0
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   '@typescript-eslint/eslint-plugin@7.8.0':
     resolution: {integrity: sha512-gFTT+ezJmkwutUPmB0skOj3GZJtlEGnlssems4AjkVweUPGj7jRwwqg0Hhg7++kPGJqKtTYx+R05Ftww372aIg==}
     engines: {node: ^18.18.0 || >=20.0.0}
     peerDependencies:
       '@typescript-eslint/parser': ^7.0.0
       eslint: ^8.56.0
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  '@typescript-eslint/parser@6.21.0':
+    resolution: {integrity: sha512-tbsV1jPne5CkFQCgPBcDOt30ItF7aJoZL997JSF7MhGQqOeT3svWRYxiqlfA5RUdlHN6Fi+EI9bxqbdyAUZjYQ==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      eslint: ^7.0.0 || ^8.0.0
       typescript: '*'
     peerDependenciesMeta:
       typescript:
@@ -1696,9 +1948,23 @@ packages:
       typescript:
         optional: true
 
+  '@typescript-eslint/scope-manager@6.21.0':
+    resolution: {integrity: sha512-OwLUIWZJry80O99zvqXVEioyniJMa+d2GrqpUTqi5/v5D5rOrppJVBPa0yKCblcigC0/aYAzxxqQ1B+DS2RYsg==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+
   '@typescript-eslint/scope-manager@7.8.0':
     resolution: {integrity: sha512-viEmZ1LmwsGcnr85gIq+FCYI7nO90DVbE37/ll51hjv9aG+YZMb4WDE2fyWpUR4O/UrhGRpYXK/XajcGTk2B8g==}
     engines: {node: ^18.18.0 || >=20.0.0}
+
+  '@typescript-eslint/type-utils@6.21.0':
+    resolution: {integrity: sha512-rZQI7wHfao8qMX3Rd3xqeYSMCL3SoiSQLBATSiVKARdFGCYSRvmViieZjqc58jKgs8Y8i9YvVVhRbHSTA4VBag==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      eslint: ^7.0.0 || ^8.0.0
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@typescript-eslint/type-utils@7.8.0':
     resolution: {integrity: sha512-H70R3AefQDQpz9mGv13Uhi121FNMh+WEaRqcXTX09YEDky21km4dV1ZXJIp8QjXc4ZaVkXVdohvWDzbnbHDS+A==}
@@ -1710,6 +1976,10 @@ packages:
       typescript:
         optional: true
 
+  '@typescript-eslint/types@6.21.0':
+    resolution: {integrity: sha512-1kFmZ1rOm5epu9NZEZm1kckCDGj5UJEf7P1kliH4LKu/RkwpsfqqGmY2OOcUs18lSlQBKLDYBOGxRVtrMN5lpg==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+
   '@typescript-eslint/types@7.8.0':
     resolution: {integrity: sha512-wf0peJ+ZGlcH+2ZS23aJbOv+ztjeeP8uQ9GgwMJGVLx/Nj9CJt17GWgWWoSmoRVKAX2X+7fzEnAjxdvK2gqCLw==}
     engines: {node: ^18.18.0 || >=20.0.0}
@@ -1717,6 +1987,15 @@ packages:
   '@typescript-eslint/types@7.9.0':
     resolution: {integrity: sha512-oZQD9HEWQanl9UfsbGVcZ2cGaR0YT5476xfWE0oE5kQa2sNK2frxOlkeacLOTh9po4AlUT5rtkGyYM5kew0z5w==}
     engines: {node: ^18.18.0 || >=20.0.0}
+
+  '@typescript-eslint/typescript-estree@6.21.0':
+    resolution: {integrity: sha512-6npJTkZcO+y2/kr+z0hc4HwNfrrP4kNYh57ek7yCNlrBjWQ1Y0OS7jiZTkgumrvkX5HkEKXFZkkdFNkaW2wmUQ==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@typescript-eslint/typescript-estree@7.8.0':
     resolution: {integrity: sha512-5pfUCOwK5yjPaJQNy44prjCwtr981dO8Qo9J9PwYXZ0MosgAbfEMB008dJ5sNo3+/BN6ytBPuSvXUg9SAqB0dg==}
@@ -1736,11 +2015,21 @@ packages:
       typescript:
         optional: true
 
+  '@typescript-eslint/utils@6.21.0':
+    resolution: {integrity: sha512-NfWVaC8HP9T8cbKQxHcsJBY5YE1O33+jpMwN45qzWWaPDZgLIbo12toGMWnmhvCpd3sIxkpDw3Wv1B3dYrbDQQ==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      eslint: ^7.0.0 || ^8.0.0
+
   '@typescript-eslint/utils@7.8.0':
     resolution: {integrity: sha512-L0yFqOCflVqXxiZyXrDr80lnahQfSOfc9ELAAZ75sqicqp2i36kEZZGuUymHNFoYOqxRT05up760b4iGsl02nQ==}
     engines: {node: ^18.18.0 || >=20.0.0}
     peerDependencies:
       eslint: ^8.56.0
+
+  '@typescript-eslint/visitor-keys@6.21.0':
+    resolution: {integrity: sha512-JJtkDduxLi9bivAB+cYOVMtbkqdPOhZ+ZI5LC47MIRrDV4Yn2o+ZnW10Nkmr28xRpSpdJ6Sm42Hjf2+REYXm0A==}
+    engines: {node: ^16.0.0 || >=18.0.0}
 
   '@typescript-eslint/visitor-keys@7.8.0':
     resolution: {integrity: sha512-q4/gibTNBQNA0lGyYQCmWRS5D15n8rXh4QjK3KV+MBPlTYHpfBUT3D3PaPR/HeNiI9W6R7FvlkcGhNyAoP+caA==}
@@ -1776,6 +2065,10 @@ packages:
     resolution: {integrity: sha512-k49q5D7EBk4vGzpM81KDNyGL4YaB12v8qYNqR7/5f4xoAksotf7h3VeAjCmJFSttEOnC9LNb9GYTzJAWJoCv7w==}
     engines: {node: '>= 8.5', npm: '>= 5'}
     deprecated: 'UI5 Tooling version 1 and below are out of maintenance. Migrate your project to the latest version: https://sap.github.io/ui5-tooling/stable/'
+  '@ui5/logger@2.0.1':
+    resolution: {integrity: sha512-FU5moQF9HATZEIJVQxXWRsUKMveIRJNPSmH3Mptcuc05f6gKu1BWcamDaDHXmMSyoKRounY9Aok94NTQMi7eDw==}
+    engines: {node: '>= 10', npm: '>= 5'}
+    deprecated: 'UI5 Tooling version 2 is out of maintenance. Migrate your project to the latest version: https://sap.github.io/ui5-tooling/stable/'
 
   '@ui5/logger@3.0.0':
     resolution: {integrity: sha512-Np9pHhr+dnyL2gDFwIx6c6Xy0yhtpBIqUQM9An8uLX/wIcRjIjBSQ/r16o3YgS9roY59I/uj5ZEbIa1cdS3Dzg==}
@@ -2349,6 +2642,9 @@ packages:
   chevrotain@7.1.1:
     resolution: {integrity: sha512-wy3mC1x4ye+O+QkEinVJkPf5u2vsrDIYW9G7ZuwFl6v/Yu0LwUuT2POsb+NUWApebyxfkQq6+yDfRExbnI5rcw==}
 
+  chevrotain@9.1.0:
+    resolution: {integrity: sha512-A86/55so63HCfu0dgGg3j9u8uuuBOrSqly1OhBZxRu2x6sAKILLzfVjbGMw45kgier6lz45EzcjjWtTRgoT84Q==}
+
   chokidar@3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
     engines: {node: '>= 8.10.0'}
@@ -2751,6 +3047,10 @@ packages:
   decamelize@6.0.0:
     resolution: {integrity: sha512-Fv96DCsdOgB6mdGl67MT5JaTNKRzrzill5OH5s8bjYJXVlcXyPYGyPsUkWyGV5p1TXI5esYIYMMeDJL0hEIwaA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  decode-uri-component@0.2.2:
+    resolution: {integrity: sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==}
+    engines: {node: '>=0.10'}
 
   decompress-response@6.0.0:
     resolution: {integrity: sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==}
@@ -3249,6 +3549,10 @@ packages:
   fill-range@7.0.1:
     resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}
     engines: {node: '>=8'}
+
+  filter-obj@1.1.0:
+    resolution: {integrity: sha512-8rXg1ZnX7xzy2NGDVkBVaAy+lSlPNwad13BtgSlLuxfIslyt5Vg64U7tFcCt4WS1R0hvtnQybT/IyCkGZ3DpXQ==}
+    engines: {node: '>=0.10.0'}
 
   finalhandler@1.1.2:
     resolution: {integrity: sha512-aAWcW57uxVNrQZqFXjITpW3sIUQmHGG3qSb9mUah9MgMC4NeWhNOlNjXEYq3HjRAvL6arUviZGGJsBg6z0zsWA==}
@@ -4543,6 +4847,10 @@ packages:
     resolution: {integrity: sha512-sBz8G/YjVniEz6lKPNpKxXwazJe4c19fEfV2GDMX6AjFz+MX9uDWIZW8XreVhkFW3fkIdTv/gxWr/Kks5FFAVw==}
     engines: {node: '>=10'}
 
+  minimatch@9.0.3:
+    resolution: {integrity: sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==}
+    engines: {node: '>=16 || 14 >=14.17'}
+
   minimatch@9.0.4:
     resolution: {integrity: sha512-KqWh+VchfxcMNRAJjj2tnsSJdNbHsVgnkBhTNrW7AjVo6OvLtxw8zfT9oLw1JSohlFzJ8jCoTgaoXvJ+kHt6fw==}
     engines: {node: '>=16 || 14 >=14.17'}
@@ -5260,6 +5568,10 @@ packages:
   query-selector-shadow-dom@1.0.1:
     resolution: {integrity: sha512-lT5yCqEBgfoMYpf3F2xQRK7zEr1rhIIZuceDK6+xRkJQ4NMbHTwXqk4NkwDwQMNqXgG9r9fyHnzwNVs6zV5KRw==}
 
+  query-string@7.1.3:
+    resolution: {integrity: sha512-hh2WYhq4fi8+b+/2Kg9CEge4fDPvHS534aOOvOZeQ3+Vf2mCFsaFBYj0i+iXcAq6I9Vzp5fjMFBlONvayDC1qg==}
+    engines: {node: '>=6'}
+
   querystring@0.2.0:
     resolution: {integrity: sha512-X/xY82scca2tau62i9mDyU9K+I+djTMUsvwf7xnUX5GLvVzgJybOJf4Y6o9Zx3oJK/LSXg5tTZBjwzqVPaPO2g==}
     engines: {node: '>=0.4.x'}
@@ -5751,6 +6063,10 @@ packages:
     resolution: {integrity: sha512-r46gZQZQV+Kl9oItvl1JZZqJKGr+oEkB08A6BzkiR7593/7IbtuncXHd2YoYeTsG4157ZssMu9KYvUHLcjcDoA==}
     engines: {node: '>=6.0.0'}
 
+  split-on-first@1.1.0:
+    resolution: {integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==}
+    engines: {node: '>=6'}
+
   split2@4.2.0:
     resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
     engines: {node: '>= 10.x'}
@@ -5797,6 +6113,10 @@ packages:
 
   streamx@2.16.1:
     resolution: {integrity: sha512-m9QYj6WygWyWa3H1YY69amr4nVgy61xfjys7xO7kviL5rfIEc2naf+ewFiOA+aEJD7y0JO3h2GoiUv4TDwEGzQ==}
+
+  strict-uri-encode@2.0.0:
+    resolution: {integrity: sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==}
+    engines: {node: '>=4'}
 
   string-argv@0.3.2:
     resolution: {integrity: sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==}
@@ -6107,6 +6427,8 @@ packages:
 
   ui5-task-zipper@3.1.4:
     resolution: {integrity: sha512-OUCvVegxqU2ftrKDELu2Jz377Q1LIzhHFlfwcvAN6iHHTENFewFuIa+CA70znYTfAIq4ojB5se9eM1Hy6L/C7w==}
+  ui5-task-flatten-library@0.2.5:
+    resolution: {integrity: sha512-oHT+NQeP1GdJTddBtbq77Uv8KLocSLblwoVuNIVkE3v3/397SbWndguhcGWegXlo0BpD5hl9zMXcN9TnflyTfw==}
 
   ui5-tooling-modules@3.5.4:
     resolution: {integrity: sha512-dMKu3WyFDlb3naTNhYnNhXKhdwT0o9nFgvEJ1BT5KLnUvKKfmoO5L0BSihKu8jZQjXUP0+nhbBrS42mXs8vbVw==}
@@ -7358,6 +7680,10 @@ snapshots:
       '@sap/cds': 7.9.0(express@4.19.2)
       better-sqlite3: 9.6.0
 
+  '@chevrotain/types@9.1.0': {}
+
+  '@chevrotain/utils@9.1.0': {}
+
   '@colors/colors@1.5.0': {}
 
   '@colors/colors@1.6.0': {}
@@ -7903,6 +8229,23 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.17.2':
     optional: true
 
+  '@sap-ux/adp-tooling@0.10.5(debug@4.3.4)':
+    dependencies:
+      '@sap-ux/axios-extension': 1.12.3(debug@4.3.4)
+      '@sap-ux/btp-utils': 0.14.4(debug@4.3.4)
+      '@sap-ux/logger': 0.5.1
+      '@sap-ux/project-access': 1.20.0
+      '@sap-ux/system-access': 0.3.27(debug@4.3.4)
+      '@sap-ux/ui5-config': 0.22.4
+      adm-zip: 0.5.10
+      ejs: 3.1.10
+      mem-fs: 2.1.0
+      mem-fs-editor: 9.4.0(mem-fs@2.1.0)
+      prompts: 2.4.2
+      sanitize-filename: 1.6.3
+    transitivePeerDependencies:
+      - debug
+
   '@sap-ux/adp-tooling@0.9.11(debug@4.3.4)':
     dependencies:
       '@sap-ux/axios-extension': 1.11.6(debug@4.3.4)
@@ -7920,9 +8263,28 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@sap-ux/annotation-converter@0.8.13':
+    dependencies:
+      '@sap-ux/vocabularies-types': 0.10.12
+
   '@sap-ux/axios-extension@1.11.6(debug@4.3.4)':
     dependencies:
       '@sap-ux/btp-utils': 0.14.3(debug@4.3.4)
+      '@sap-ux/logger': 0.5.1
+      '@xmldom/xmldom': 0.8.10
+      axios: 1.6.8(debug@4.3.4)
+      detect-content-type: 1.2.0
+      fast-xml-parser: 4.2.7
+      lodash: 4.17.21
+      open: 7.0.3
+      qs: 6.7.3
+      xpath: 0.0.33
+    transitivePeerDependencies:
+      - debug
+
+  '@sap-ux/axios-extension@1.12.3(debug@4.3.4)':
+    dependencies:
+      '@sap-ux/btp-utils': 0.14.4(debug@4.3.4)
       '@sap-ux/logger': 0.5.1
       '@xmldom/xmldom': 0.8.10
       axios: 1.6.8(debug@4.3.4)
@@ -7942,9 +8304,46 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@sap-ux/btp-utils@0.14.4(debug@4.3.4)':
+    dependencies:
+      '@sap/cf-tools': 2.1.1
+      axios: 1.6.8(debug@4.3.4)
+    transitivePeerDependencies:
+      - debug
+
   '@sap-ux/control-property-editor@0.4.17': {}
 
+  '@sap-ux/control-property-editor@0.4.20': {}
+
+  '@sap-ux/edmx-parser@0.7.1':
+    dependencies:
+      xml-js: 1.6.11
+
+  '@sap-ux/fe-mockserver-core@1.2.42':
+    dependencies:
+      '@sap-ux/annotation-converter': 0.8.13
+      '@sap-ux/edmx-parser': 0.7.1
+      '@ui5/logger': 2.0.1
+      balanced-match: 1.0.2
+      body-parser: 1.20.2
+      chevrotain: 9.1.0
+      chokidar: 3.6.0
+      etag: 1.8.1
+      graceful-fs: 4.2.11
+      lodash.clonedeep: 4.5.0
+      lodash.merge: 4.6.2
+      query-string: 7.1.3
+      router: 1.3.8
+    transitivePeerDependencies:
+      - supports-color
+
   '@sap-ux/i18n@0.0.5':
+    dependencies:
+      jsonc-parser: 3.2.0
+      vscode-languageserver-textdocument: 1.0.7
+      vscode-languageserver-types: 3.17.2
+
+  '@sap-ux/i18n@0.0.6':
     dependencies:
       jsonc-parser: 3.2.0
       vscode-languageserver-textdocument: 1.0.7
@@ -7968,10 +8367,33 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@sap-ux/preview-middleware@0.13.36(debug@4.3.4)(express@4.19.2)':
+    dependencies:
+      '@sap-ux/adp-tooling': 0.10.5(debug@4.3.4)
+      '@sap-ux/btp-utils': 0.14.4(debug@4.3.4)
+      '@sap-ux/control-property-editor-sources': '@sap-ux/control-property-editor@0.4.20'
+      '@sap-ux/logger': 0.5.1
+      '@sap-ux/project-access': 1.20.0
+      ejs: 3.1.10
+      express: 4.19.2
+      mem-fs: 2.1.0
+      mem-fs-editor: 9.4.0(mem-fs@2.1.0)
+    transitivePeerDependencies:
+      - debug
+
   '@sap-ux/project-access@1.19.6':
     dependencies:
       '@sap-ux/i18n': 0.0.5
       '@sap-ux/ui5-config': 0.22.1
+      findit2: 2.2.3
+      mem-fs: 2.1.0
+      mem-fs-editor: 9.4.0(mem-fs@2.1.0)
+
+  '@sap-ux/project-access@1.20.0':
+    dependencies:
+      '@sap-ux/i18n': 0.0.6
+      '@sap-ux/ui5-config': 0.22.4
+      fast-xml-parser: 4.2.7
       findit2: 2.2.3
       mem-fs: 2.1.0
       mem-fs-editor: 9.4.0(mem-fs@2.1.0)
@@ -7996,11 +8418,35 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@sap-ux/system-access@0.3.27(debug@4.3.4)':
+    dependencies:
+      '@sap-ux/axios-extension': 1.12.3(debug@4.3.4)
+      '@sap-ux/btp-utils': 0.14.4(debug@4.3.4)
+      '@sap-ux/logger': 0.5.1
+      '@sap-ux/store': 0.5.0
+      prompts: 2.4.2
+    transitivePeerDependencies:
+      - debug
+
   '@sap-ux/ui5-config@0.22.1':
     dependencies:
       '@sap-ux/yaml': 0.14.1
       lodash: 4.17.21
       semver: 7.5.4
+
+  '@sap-ux/ui5-config@0.22.4':
+    dependencies:
+      '@sap-ux/yaml': 0.14.1
+      lodash: 4.17.21
+      semver: 7.5.4
+
+  '@sap-ux/ui5-middleware-fe-mockserver@2.2.42':
+    dependencies:
+      '@sap-ux/fe-mockserver-core': 1.2.42
+    transitivePeerDependencies:
+      - supports-color
+
+  '@sap-ux/vocabularies-types@0.10.12': {}
 
   '@sap-ux/yaml@0.14.1':
     dependencies:
@@ -8167,6 +8613,24 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  '@sap/ux-ui5-tooling@1.13.5(encoding@0.1.13)':
+    dependencies:
+      '@sap-ux/preview-middleware': 0.13.36(debug@4.3.4)(express@4.19.2)
+      '@ui5/fs': 3.0.4
+      connect-livereload: 0.6.1
+      debug: 4.3.4(supports-color@8.1.1)
+      express: 4.19.2
+      livereload: 0.9.3
+      semver: 7.5.3
+      update-notifier-cjs: 5.1.6(encoding@0.1.13)
+    optionalDependencies:
+      keytar: 7.9.0
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+
   '@sap/xsenv@4.2.0':
     dependencies:
       debug: 4.3.3
@@ -8191,6 +8655,12 @@ snapshots:
       node-rsa: 1.1.1
     transitivePeerDependencies:
       - supports-color
+  '@sapui5/ts-types-esm@1.108.30':
+    dependencies:
+      '@types/jquery': 3.5.13
+      '@types/offscreencanvas': 2019.6.4
+      '@types/qunit': 2.5.4
+      '@types/three': 0.125.3
 
   '@sapui5/ts-types-esm@1.123.1':
     dependencies:
@@ -8359,6 +8829,26 @@ snapshots:
       '@types/node': 20.12.11
     optional: true
 
+  '@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)':
+    dependencies:
+      '@eslint-community/regexpp': 4.10.0
+      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
+      '@typescript-eslint/scope-manager': 6.21.0
+      '@typescript-eslint/type-utils': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
+      '@typescript-eslint/visitor-keys': 6.21.0
+      debug: 4.3.4(supports-color@8.1.1)
+      eslint: 8.57.0
+      graphemer: 1.4.0
+      ignore: 5.3.1
+      natural-compare: 1.4.0
+      semver: 7.6.2
+      ts-api-utils: 1.3.0(typescript@5.4.5)
+    optionalDependencies:
+      typescript: 5.4.5
+    transitivePeerDependencies:
+      - supports-color
+
   '@typescript-eslint/eslint-plugin@7.8.0(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
       '@eslint-community/regexpp': 4.10.0
@@ -8379,6 +8869,19 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5)':
+    dependencies:
+      '@typescript-eslint/scope-manager': 6.21.0
+      '@typescript-eslint/types': 6.21.0
+      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.4.5)
+      '@typescript-eslint/visitor-keys': 6.21.0
+      debug: 4.3.4(supports-color@8.1.1)
+      eslint: 8.57.0
+    optionalDependencies:
+      typescript: 5.4.5
+    transitivePeerDependencies:
+      - supports-color
+
   '@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
       '@typescript-eslint/scope-manager': 7.8.0
@@ -8392,10 +8895,27 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@typescript-eslint/scope-manager@6.21.0':
+    dependencies:
+      '@typescript-eslint/types': 6.21.0
+      '@typescript-eslint/visitor-keys': 6.21.0
+
   '@typescript-eslint/scope-manager@7.8.0':
     dependencies:
       '@typescript-eslint/types': 7.8.0
       '@typescript-eslint/visitor-keys': 7.8.0
+
+  '@typescript-eslint/type-utils@6.21.0(eslint@8.57.0)(typescript@5.4.5)':
+    dependencies:
+      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.4.5)
+      '@typescript-eslint/utils': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
+      debug: 4.3.4(supports-color@8.1.1)
+      eslint: 8.57.0
+      ts-api-utils: 1.3.0(typescript@5.4.5)
+    optionalDependencies:
+      typescript: 5.4.5
+    transitivePeerDependencies:
+      - supports-color
 
   '@typescript-eslint/type-utils@7.8.0(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
@@ -8409,9 +8929,26 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@typescript-eslint/types@6.21.0': {}
+
   '@typescript-eslint/types@7.8.0': {}
 
   '@typescript-eslint/types@7.9.0': {}
+
+  '@typescript-eslint/typescript-estree@6.21.0(typescript@5.4.5)':
+    dependencies:
+      '@typescript-eslint/types': 6.21.0
+      '@typescript-eslint/visitor-keys': 6.21.0
+      debug: 4.3.4(supports-color@8.1.1)
+      globby: 11.1.0
+      is-glob: 4.0.3
+      minimatch: 9.0.3
+      semver: 7.6.2
+      ts-api-utils: 1.3.0(typescript@5.4.5)
+    optionalDependencies:
+      typescript: 5.4.5
+    transitivePeerDependencies:
+      - supports-color
 
   '@typescript-eslint/typescript-estree@7.8.0(typescript@5.4.5)':
     dependencies:
@@ -8443,6 +8980,20 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@typescript-eslint/utils@6.21.0(eslint@8.57.0)(typescript@5.4.5)':
+    dependencies:
+      '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0)
+      '@types/json-schema': 7.0.15
+      '@types/semver': 7.5.8
+      '@typescript-eslint/scope-manager': 6.21.0
+      '@typescript-eslint/types': 6.21.0
+      '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.4.5)
+      eslint: 8.57.0
+      semver: 7.6.2
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
   '@typescript-eslint/utils@7.8.0(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0)
@@ -8456,6 +9007,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  '@typescript-eslint/visitor-keys@6.21.0':
+    dependencies:
+      '@typescript-eslint/types': 6.21.0
+      eslint-visitor-keys: 3.4.3
 
   '@typescript-eslint/visitor-keys@7.8.0':
     dependencies:
@@ -8545,6 +9101,7 @@ snapshots:
       random-int: 3.0.0
 
   '@ui5/logger@1.0.2':
+  '@ui5/logger@2.0.1':
     dependencies:
       npmlog: 4.1.2
 
@@ -9368,6 +9925,12 @@ snapshots:
     dependencies:
       regexp-to-ast: 0.5.0
 
+  chevrotain@9.1.0:
+    dependencies:
+      '@chevrotain/types': 9.1.0
+      '@chevrotain/utils': 9.1.0
+      regexp-to-ast: 0.5.0
+
   chokidar@3.5.3:
     dependencies:
       anymatch: 3.1.3
@@ -9776,6 +10339,8 @@ snapshots:
   decamelize@4.0.0: {}
 
   decamelize@6.0.0: {}
+
+  decode-uri-component@0.2.2: {}
 
   decompress-response@6.0.0:
     dependencies:
@@ -10458,6 +11023,8 @@ snapshots:
   fill-range@7.0.1:
     dependencies:
       to-regex-range: 5.0.1
+
+  filter-obj@1.1.0: {}
 
   finalhandler@1.1.2:
     dependencies:
@@ -11825,7 +12392,7 @@ snapshots:
       binaryextensions: 4.19.0
       commondir: 1.0.1
       deep-extend: 0.6.0
-      ejs: 3.1.9
+      ejs: 3.1.10
       globby: 11.1.0
       isbinaryfile: 4.0.10
       minimatch: 3.1.2
@@ -11901,6 +12468,10 @@ snapshots:
       brace-expansion: 2.0.1
 
   minimatch@7.4.6:
+    dependencies:
+      brace-expansion: 2.0.1
+
+  minimatch@9.0.3:
     dependencies:
       brace-expansion: 2.0.1
 
@@ -12703,6 +13274,13 @@ snapshots:
 
   query-selector-shadow-dom@1.0.1: {}
 
+  query-string@7.1.3:
+    dependencies:
+      decode-uri-component: 0.2.2
+      filter-obj: 1.1.0
+      split-on-first: 1.1.0
+      strict-uri-encode: 2.0.0
+
   querystring@0.2.0: {}
 
   queue-microtask@1.2.3: {}
@@ -13285,6 +13863,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  split-on-first@1.1.0: {}
+
   split2@4.2.0: {}
 
   sprintf-js@1.0.3: {}
@@ -13339,6 +13919,8 @@ snapshots:
       queue-tick: 1.0.1
     optionalDependencies:
       bare-events: 2.2.2
+
+  strict-uri-encode@2.0.0: {}
 
   string-argv@0.3.2: {}
 
@@ -13710,6 +14292,9 @@ snapshots:
   ui5-task-zipper@3.1.4:
     dependencies:
       yazl: 2.5.1
+  ui5-task-flatten-library@0.2.5:
+    dependencies:
+      '@ui5/logger': 2.0.1
 
   ui5-tooling-modules@3.5.4(typescript@5.4.5):
     dependencies:
@@ -13878,7 +14463,7 @@ snapshots:
       pupa: 2.1.1
       registry-auth-token: 5.0.2
       registry-url: 5.1.0
-      semver: 7.5.3
+      semver: 7.6.2
       semver-diff: 3.1.1
       xdg-basedir: 4.0.0
     transitivePeerDependencies:

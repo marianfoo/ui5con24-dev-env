@@ -14,6 +14,8 @@ sap.ui.define(["sap/ui/core/Control"], (Control) => {
             render(oRM, oControl) {
                 console.debug(`[${oControl.getMetadata().getName()}] > rendering`)
                 oRM.openStart("div", oControl)
+                // just write 'UI5con24 control' in the div
+                oRM.text("UI5con24 control")
                 oRM.openEnd()
                 // control html goes here
                 oRM.close("div")
