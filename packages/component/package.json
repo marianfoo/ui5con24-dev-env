@@ -19,9 +19,10 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "ui5 build --config=ui5-build.yaml --all --clean-dest --dest dist",
+    "build:abap": "ui5 build --config=ui5-build-abap.yaml --all --clean-dest --dest dist",
     "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo",
     "gen-types": "npx @ui5/ts-interface-generator",
-    "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml -y"
+    "deploy": "npm run build:abap && fiori deploy --config ui5-deploy.yaml -y"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
