@@ -200,14 +200,20 @@ importers:
         specifier: ^1.7.0
         version: 1.7.0(@sap/cds@7.9.0(express@4.19.2))
       cds-launchpad-plugin:
-        specifier: 2.1.8
-        version: 2.1.8(@sap/cds-dk@7.9.1)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2)
+        specifier: 2.2.0
+        version: 2.2.0(@sap/cds-dk@7.9.1)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2)
       cds-plugin-ui5:
         specifier: ^0.8.3
         version: 0.8.3(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2)
+      http-proxy-middleware:
+        specifier: 3.0.0
+        version: 3.0.0
       ui5con24.app:
         specifier: workspace:*
         version: link:../app
+      ui5con24.app.abap:
+        specifier: workspace:*
+        version: link:../app_abap
 
   packages/component:
     devDependencies:
@@ -2495,8 +2501,8 @@ packages:
     resolution: {integrity: sha512-prMTQVpcns/tzFgFVkVp6ak6RykZyWb3gu8ckUpd6YkTlacOd3DXGJjIpD4Q6zJirizvaiAjSSHlOsA+6sNh2A==}
     engines: {node: '>= 10'}
 
-  cds-launchpad-plugin@2.1.8:
-    resolution: {integrity: sha512-BeDaBWvtusWfeHsc93sv/E6kKOXRsandfPvg310durm0uWm3ZAAyyK4YPqNMRexoR33XPQC1aD4hUNFTz+I/Vg==}
+  cds-launchpad-plugin@2.2.0:
+    resolution: {integrity: sha512-ehnR9VNSLXzfet0Ha9EcrMPR31B0dNSEzpGu00KRy6j2CObACdo0klhq9o6iC7EbVbz9+uuo4J9HCDBCjVOMkA==}
     peerDependencies:
       '@sap/cds': '>=5'
       '@sap/cds-dk': '>=4.3'
@@ -3808,6 +3814,10 @@ packages:
     peerDependenciesMeta:
       '@types/express':
         optional: true
+
+  http-proxy-middleware@3.0.0:
+    resolution: {integrity: sha512-36AV1fIaI2cWRzHo+rbcxhe3M3jUDCNzc4D5zRl57sEWRAxdXYtw7FSQKYY6PDKssiAKjLYypbssHk+xs/kMXw==}
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
 
   http-proxy@1.18.1:
     resolution: {integrity: sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ==}
@@ -9466,7 +9476,7 @@ snapshots:
     dependencies:
       lodash: 4.17.21
 
-  cds-launchpad-plugin@2.1.8(@sap/cds-dk@7.9.1)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2):
+  cds-launchpad-plugin@2.2.0(@sap/cds-dk@7.9.1)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2):
     dependencies:
       '@sap/cds': 7.9.0(express@4.19.2)
       '@sap/cds-dk': 7.9.1
@@ -11020,14 +11030,25 @@ snapshots:
   http-proxy-middleware@2.0.6:
     dependencies:
       '@types/http-proxy': 1.17.14
-      http-proxy: 1.18.1
+      http-proxy: 1.18.1(debug@4.3.4)
       is-glob: 4.0.3
       is-plain-obj: 3.0.0
       micromatch: 4.0.5
     transitivePeerDependencies:
       - debug
 
-  http-proxy@1.18.1:
+  http-proxy-middleware@3.0.0:
+    dependencies:
+      '@types/http-proxy': 1.17.14
+      debug: 4.3.4(supports-color@8.1.1)
+      http-proxy: 1.18.1(debug@4.3.4)
+      is-glob: 4.0.3
+      is-plain-obj: 3.0.0
+      micromatch: 4.0.5
+    transitivePeerDependencies:
+      - supports-color
+
+  http-proxy@1.18.1(debug@4.3.4):
     dependencies:
       eventemitter3: 4.0.7
       follow-redirects: 1.15.6(debug@4.3.4)
@@ -11518,7 +11539,7 @@ snapshots:
       '@ui5/project': 3.9.1(bluebird@3.7.2)
       '@ui5/server': 3.2.0
       express: 4.19.2
-      http-proxy: 1.18.1
+      http-proxy: 1.18.1(debug@4.3.4)
       js-yaml: 4.1.0
       karma: 6.4.3
     transitivePeerDependencies:
@@ -11537,7 +11558,7 @@ snapshots:
       dom-serialize: 2.2.1
       glob: 7.2.3
       graceful-fs: 4.2.11
-      http-proxy: 1.18.1
+      http-proxy: 1.18.1(debug@4.3.4)
       isbinaryfile: 4.0.10
       lodash: 4.17.21
       log4js: 6.9.1

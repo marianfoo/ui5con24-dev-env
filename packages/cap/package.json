@@ -11,9 +11,11 @@
   ],
   "devDependencies": {
     "@cap-js/sqlite": "^1.7.0",
-    "cds-launchpad-plugin": "2.1.8",
+    "cds-launchpad-plugin": "2.2.0",
     "cds-plugin-ui5": "^0.8.3",
-    "ui5con24.app": "workspace:*"
+    "ui5con24.app": "workspace:*",
+    "ui5con24.app.abap": "workspace:*",
+    "http-proxy-middleware": "3.0.0"
   },
   "dependencies": {
     "@sap/cds": "^7.9.0",
@@ -22,13 +24,17 @@
   "scripts": {
     "genres": "cds serve test/genres.cds",
     "start": "cds-serve",
-    "watch": "cds watch"
+    "watch": "cds watch",
+    "watch:dev": "NODE_ENV=development cds watch"
   },
   "cds": {
     "cds-plugin-ui5": {
       "modules": {
         "ui5con24.app": {
-          "configFile": "ui5.yaml"
+          "configFile": "ui5-flp.yaml"
+        },
+        "ui5con24.app.abap": {
+          "configFile": "ui5-flp.yaml"
         }
       }
     },
@@ -37,7 +43,11 @@
       "version": "1.120.14",
       "modulePaths": {
         "ui5con24.lib": "./ui5con24.app/resources/ui5con24/lib",
-        "test": "./adsfasf"
+        "ui5con24.lib.abap": "./ui5con24.app.abap/resources/ui5con24/lib/abap",
+        "ui5con24.component": "./ui5con24.app/ui5con24/component",
+        "ui5con24.cc.Control": "./ui5con24.app/resources/ui5con24/cc/Control",
+        "cc.spreadsheetimporter.v0_34_1": "./ui5con24.app.abap/resources/cc/spreadsheetimporter/v0_34_1/"
+
     }
     }
   }
