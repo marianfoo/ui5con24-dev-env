@@ -27,6 +27,7 @@ server:
         generateDts: true
         removeConsoleStatements: false
         generateTsInterfaces: false
+        debug: true
     - name: ui5-tooling-modules-middleware
       afterMiddleware: ui5-tooling-transpile-middleware
       configuration:
