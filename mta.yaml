@@ -18,10 +18,7 @@ modules:
   parameters:
     buildpack: nodejs_buildpack
   build-parameters:
-    builder: custom
-    commands:
-    - pnpm --filter ./packages/cap/gen/srv install --shamefully-hoist true
-    # builder: npm
+    builder: npm
 - name: ui5con24-dev-env-db-deployer
   type: hdb
   path: packages/cap/gen/db
