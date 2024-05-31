@@ -28,7 +28,7 @@
 		},
 		"dataSources": {
 			"mainService": {
-			  "uri": "/sap/opu/odata/dmo/UI_TRAVEL_U_V2/",
+			  "uri": "sap/opu/odata/dmo/UI_TRAVEL_U_V2/",
 			  "type": "OData",
 			  "settings": {
 				"annotations": [],
