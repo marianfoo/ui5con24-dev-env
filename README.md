@@ -2,6 +2,23 @@
 
 This repository showcases a advanced development environment for UI5 and CAP projects.
 
+## Setup
+
+```bash
+git clone https://github.com/marianfoo/ui5con24-dev-env
+cd ui5con24-dev-env
+mkdir packages/component/dist
+pnpm i
+pnpm start:server:setup
+pnpm start
+```
+
+## Deploy
+
+### Deploy to BTP
+
+### Deploy to ABAP
+
 ## Current used packages
 
 - ui5-middleware-livereload

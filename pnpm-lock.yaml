@@ -97,7 +97,10 @@ importers:
         specifier: 3.2.15
         version: 3.2.15
       ui5-middleware-ui5:
-        specifier: 3.1.4
+        specifier: 3.1.5
+        version: 3.1.5
+      ui5-task-zipper:
+        specifier: ^3.1.4
         version: 3.1.4
       ui5-tooling-modules:
         specifier: 3.5.6
@@ -185,11 +188,8 @@ importers:
         specifier: 3.2.15
         version: 3.2.15
       ui5-middleware-ui5:
-        specifier: 3.1.4
-        version: 3.1.4
-      ui5-task-zipper:
-        specifier: ^3.1.4
-        version: 3.1.4
+        specifier: 3.1.5
+        version: 3.1.5
       ui5-tooling-modules:
         specifier: 3.5.6
         version: 3.5.6(typescript@5.4.5)
@@ -228,11 +228,20 @@ importers:
         specifier: ^1.7.0
         version: 1.7.0(@sap/cds@7.9.0(express@4.19.2))
       cds-launchpad-plugin:
-        specifier: 2.1.8
-        version: 2.1.8(@sap/cds-dk@7.9.2)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2)
+        specifier: 2.2.0
+        version: 2.2.0(@sap/cds-dk@7.9.2)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2)
       cds-plugin-ui5:
-        specifier: ^0.8.3
-        version: 0.8.3(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2)
+        specifier: ^0.9.2
+        version: 0.9.2(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2)
+      http-proxy-middleware:
+        specifier: 3.0.0
+        version: 3.0.0
+      ui5con24.app:
+        specifier: workspace:*
+        version: link:../app
+      ui5con24.app.abap:
+        specifier: workspace:*
+        version: link:../app_abap
 
   packages/component:
     devDependencies:
@@ -439,7 +448,7 @@ importers:
         version: 2.2.42
       '@sap/ux-ui5-tooling':
         specifier: '1'
-        version: 1.13.3(encoding@0.1.13)
+        version: 1.13.5(encoding@0.1.13)
       '@ui5/cli':
         specifier: ^3.0.0
         version: 3.10.1(bluebird@3.7.2)
@@ -1735,6 +1744,7 @@ packages:
   '@sap/xssec@3.6.1':
     resolution: {integrity: sha512-OJouwIWClefpsJ8rVCziEydeDHDNOMA4hjsjw9OqolbbObaiYMMDRU0YJbPe7XL5JkLgrtt+CLCBCsNERxcCZg==}
     engines: {node: '>=14'}
+
   '@sapui5/ts-types-esm@1.108.30':
     resolution: {integrity: sha512-Do3iq3j+sUpUdMvxC3eg6RQ5/upMzFi3+uJInxaHoYQRzN6iBKuN/bju1dWLdMQ19InJOunIatH7NOE3wzr0Og==}
 
@@ -2065,6 +2075,7 @@ packages:
     resolution: {integrity: sha512-k49q5D7EBk4vGzpM81KDNyGL4YaB12v8qYNqR7/5f4xoAksotf7h3VeAjCmJFSttEOnC9LNb9GYTzJAWJoCv7w==}
     engines: {node: '>= 8.5', npm: '>= 5'}
     deprecated: 'UI5 Tooling version 1 and below are out of maintenance. Migrate your project to the latest version: https://sap.github.io/ui5-tooling/stable/'
+
   '@ui5/logger@2.0.1':
     resolution: {integrity: sha512-FU5moQF9HATZEIJVQxXWRsUKMveIRJNPSmH3Mptcuc05f6gKu1BWcamDaDHXmMSyoKRounY9Aok94NTQMi7eDw==}
     engines: {node: '>= 10', npm: '>= 5'}
@@ -2601,15 +2612,15 @@ packages:
     resolution: {integrity: sha512-prMTQVpcns/tzFgFVkVp6ak6RykZyWb3gu8ckUpd6YkTlacOd3DXGJjIpD4Q6zJirizvaiAjSSHlOsA+6sNh2A==}
     engines: {node: '>= 10'}
 
-  cds-launchpad-plugin@2.1.8:
-    resolution: {integrity: sha512-BeDaBWvtusWfeHsc93sv/E6kKOXRsandfPvg310durm0uWm3ZAAyyK4YPqNMRexoR33XPQC1aD4hUNFTz+I/Vg==}
+  cds-launchpad-plugin@2.2.0:
+    resolution: {integrity: sha512-ehnR9VNSLXzfet0Ha9EcrMPR31B0dNSEzpGu00KRy6j2CObACdo0klhq9o6iC7EbVbz9+uuo4J9HCDBCjVOMkA==}
     peerDependencies:
       '@sap/cds': '>=5'
       '@sap/cds-dk': '>=4.3'
       express: '>=4'
 
-  cds-plugin-ui5@0.8.3:
-    resolution: {integrity: sha512-o64NzZtUnFV+QLUWRGz365OfticcARS2JpB3L6k02LmQ3A2GF0DfiBzz5vvy9rRsX6FUEnjHzEj8CyRNI6ThxQ==}
+  cds-plugin-ui5@0.9.2:
+    resolution: {integrity: sha512-g7lQKBnlifEKHVVzC/j13FwA13kw3ztR/eVUelhbokL8N5Dp/KuKDaxvMYtbSMn5ldAYfkdahxb4PpI04YDQxQ==}
     peerDependencies:
       '@sap/cds': '>=6.8.2'
       express: '>=4.18.2'
@@ -3957,6 +3968,10 @@ packages:
     peerDependenciesMeta:
       '@types/express':
         optional: true
+
+  http-proxy-middleware@3.0.0:
+    resolution: {integrity: sha512-36AV1fIaI2cWRzHo+rbcxhe3M3jUDCNzc4D5zRl57sEWRAxdXYtw7FSQKYY6PDKssiAKjLYypbssHk+xs/kMXw==}
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
 
   http-proxy@1.18.1:
     resolution: {integrity: sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ==}
@@ -5620,6 +5635,7 @@ packages:
   read-package-json@7.0.1:
     resolution: {integrity: sha512-8PcDiZ8DXUjLf687Ol4BR8Bpm2umR7vhoZOzNRt+uxD9GpBh/K+CAAALVIiYFknmvlmyg7hM7BSNUXPaCCqd0Q==}
     engines: {node: ^16.14.0 || >=18.0.0}
+    deprecated: This package is no longer supported. Please use @npmcli/package-json instead.
 
   read-pkg-up@10.0.0:
     resolution: {integrity: sha512-jgmKiS//w2Zs+YbX039CorlkOp8FIVbSAN8r8GJHDsGlmNPXo+VeHkqAwCiQVTTx5/LwLZTcEw59z3DvcLbr0g==}
@@ -6422,13 +6438,14 @@ packages:
   ui5-middleware-simpleproxy@3.2.15:
     resolution: {integrity: sha512-LlpuAk5ub1D7NzExUeBBdhiOOhwq0wARYFRMZIdNx6sPV/J4DccLpN7uOg3e3EAFTP0GOjZfOlgrjIsBxxAJIg==}
 
-  ui5-middleware-ui5@3.1.4:
-    resolution: {integrity: sha512-0kbTA0GC19UUyGC2ahgbGWVqkutwHMzstxgnI6nUpnVtIebE8cyD1jOzQV4vwcAvxNXdM68eghxHK4OLPXx+Rg==}
+  ui5-middleware-ui5@3.1.5:
+    resolution: {integrity: sha512-iVF7P6fDwUH3JDZhSXyOCmU5EcW8Hx3UoOnFffC3SIA7ze1j9sBj+NwFW7l41ZgOjdc7/Z88BFQo+INgWiQTDA==}
+
+  ui5-task-flatten-library@0.2.5:
+    resolution: {integrity: sha512-oHT+NQeP1GdJTddBtbq77Uv8KLocSLblwoVuNIVkE3v3/397SbWndguhcGWegXlo0BpD5hl9zMXcN9TnflyTfw==}
 
   ui5-task-zipper@3.1.4:
     resolution: {integrity: sha512-OUCvVegxqU2ftrKDELu2Jz377Q1LIzhHFlfwcvAN6iHHTENFewFuIa+CA70znYTfAIq4ojB5se9eM1Hy6L/C7w==}
-  ui5-task-flatten-library@0.2.5:
-    resolution: {integrity: sha512-oHT+NQeP1GdJTddBtbq77Uv8KLocSLblwoVuNIVkE3v3/397SbWndguhcGWegXlo0BpD5hl9zMXcN9TnflyTfw==}
 
   ui5-tooling-modules@3.5.4:
     resolution: {integrity: sha512-dMKu3WyFDlb3naTNhYnNhXKhdwT0o9nFgvEJ1BT5KLnUvKKfmoO5L0BSihKu8jZQjXUP0+nhbBrS42mXs8vbVw==}
@@ -6449,6 +6466,9 @@ packages:
 
   ui5-utils-express@1.3.0:
     resolution: {integrity: sha512-RXNdUxLw2QN0AyHrECoY22cmEABgDa7VzTQD+sd+dHxL0Wmy5Tz+33FuVqcn7zl8YGjyGQ8CiviUIj12XftaZA==}
+
+  ui5-utils-express@1.3.1:
+    resolution: {integrity: sha512-Uwe6Vgmg+AZROJcEsXYRa52O2A824ldfgrBU1EHNDSQo1KVIhV0cvnj6f3oBYw2ejDctw0IHbKOYK0OstOZ0cQ==}
 
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
@@ -8655,6 +8675,7 @@ snapshots:
       node-rsa: 1.1.1
     transitivePeerDependencies:
       - supports-color
+
   '@sapui5/ts-types-esm@1.108.30':
     dependencies:
       '@types/jquery': 3.5.13
@@ -9101,6 +9122,9 @@ snapshots:
       random-int: 3.0.0
 
   '@ui5/logger@1.0.2':
+    dependencies:
+      npmlog: 4.1.2
+
   '@ui5/logger@2.0.1':
     dependencies:
       npmlog: 4.1.2
@@ -9863,14 +9887,14 @@ snapshots:
     dependencies:
       lodash: 4.17.21
 
-  cds-launchpad-plugin@2.1.8(@sap/cds-dk@7.9.2)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2):
+  cds-launchpad-plugin@2.2.0(@sap/cds-dk@7.9.2)(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2):
     dependencies:
       '@sap/cds': 7.9.0(express@4.19.2)
       '@sap/cds-dk': 7.9.2
       dot-properties: 1.0.1
       express: 4.19.2
 
-  cds-plugin-ui5@0.8.3(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2):
+  cds-plugin-ui5@0.9.2(@sap/cds@7.9.0(express@4.19.2))(express@4.19.2):
     dependencies:
       '@sap/cds': 7.9.0(express@4.19.2)
       '@ui5/fs': 3.0.5
@@ -9879,6 +9903,7 @@ snapshots:
       express: 4.19.2
       js-yaml: 4.1.0
       node-html-parser: 6.1.13
+      semver: 7.6.2
     transitivePeerDependencies:
       - bluebird
       - supports-color
@@ -11504,14 +11529,25 @@ snapshots:
   http-proxy-middleware@2.0.6:
     dependencies:
       '@types/http-proxy': 1.17.14
-      http-proxy: 1.18.1
+      http-proxy: 1.18.1(debug@4.3.4)
       is-glob: 4.0.3
       is-plain-obj: 3.0.0
       micromatch: 4.0.5
     transitivePeerDependencies:
       - debug
 
-  http-proxy@1.18.1:
+  http-proxy-middleware@3.0.0:
+    dependencies:
+      '@types/http-proxy': 1.17.14
+      debug: 4.3.4(supports-color@8.1.1)
+      http-proxy: 1.18.1(debug@4.3.4)
+      is-glob: 4.0.3
+      is-plain-obj: 3.0.0
+      micromatch: 4.0.5
+    transitivePeerDependencies:
+      - supports-color
+
+  http-proxy@1.18.1(debug@4.3.4):
     dependencies:
       eventemitter3: 4.0.7
       follow-redirects: 1.15.6(debug@4.3.4)
@@ -12035,7 +12071,7 @@ snapshots:
       '@ui5/project': 3.9.1(bluebird@3.7.2)
       '@ui5/server': 3.2.0
       express: 4.19.2
-      http-proxy: 1.18.1
+      http-proxy: 1.18.1(debug@4.3.4)
       js-yaml: 4.1.0
       karma: 6.4.3
     transitivePeerDependencies:
@@ -12054,7 +12090,7 @@ snapshots:
       dom-serialize: 2.2.1
       glob: 7.2.3
       graceful-fs: 4.2.11
-      http-proxy: 1.18.1
+      http-proxy: 1.18.1(debug@4.3.4)
       isbinaryfile: 4.0.10
       lodash: 4.17.21
       log4js: 6.9.1
@@ -14276,7 +14312,7 @@ snapshots:
       - debug
       - supports-color
 
-  ui5-middleware-ui5@3.1.4:
+  ui5-middleware-ui5@3.1.5:
     dependencies:
       '@ui5/fs': 3.0.5
       '@ui5/project': 3.9.1(bluebird@3.7.2)
@@ -14284,17 +14320,18 @@ snapshots:
       express: 4.19.2
       js-yaml: 4.1.0
       node-html-parser: 6.1.13
-      ui5-utils-express: 1.3.0
+      ui5-utils-express: 1.3.1
     transitivePeerDependencies:
       - bluebird
       - supports-color
 
-  ui5-task-zipper@3.1.4:
-    dependencies:
-      yazl: 2.5.1
   ui5-task-flatten-library@0.2.5:
     dependencies:
       '@ui5/logger': 2.0.1
+
+  ui5-task-zipper@3.1.4:
+    dependencies:
+      yazl: 2.5.1
 
   ui5-tooling-modules@3.5.4(typescript@5.4.5):
     dependencies:
@@ -14365,6 +14402,8 @@ snapshots:
       - supports-color
 
   ui5-utils-express@1.3.0: {}
+
+  ui5-utils-express@1.3.1: {}
 
   unbox-primitive@1.0.2:
     dependencies:

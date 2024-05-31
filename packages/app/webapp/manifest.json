@@ -14,21 +14,20 @@
 			"version": "${version}"
 		},
 		"crossNavigation": {
-			"inbounds": {
-				"intent1": {
-					"signature": {
-						"parameters": {},
-						"additionalParameters": "allowed"
-					},
-					"semanticObject": "ui5con24",
-					"action": "demo",
-					"title": "UI5con 24",
-					"info": "",
-					"subTitle": "UI5 1.120",
-					"icon": "sap-icon://course-book"
-				}
+		  "inbounds": {
+			"intent1": {
+			  "signature": {
+				"parameters": {},
+				"additionalParameters": "allowed"
+			  },
+			  "semanticObject": "ui5con24",
+			  "action": "cap",
+			  "title": "UI5con 24",
+			  "info": "",
+			  "subTitle": "UI5 CAP",
+			  "icon": "sap-icon://course-book"
 			}
-		},
+		}},
 		"dataSources": {
 			"mainService": {
 				"uri": "/admin/",

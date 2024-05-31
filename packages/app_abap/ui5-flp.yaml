@@ -1,6 +1,6 @@
 specVersion: "3.0"
 metadata:
-  name: ui5con24.app
+  name: ui5con24.app.abap
 type: application
 framework:
   name: SAPUI5
@@ -32,13 +32,19 @@ server:
         prependPathMappings: true
     - name: ui5-middleware-simpleproxy
       afterMiddleware: compression
-      mountPath: /admin
+      mountPath: /resources/cc/spreadsheetimporter/v0_34_1/
       configuration:
-        baseUri: "http://localhost:4004/admin"
+        baseUri: "https://sap-new.marian-marianzeis-de.nuve.run/sap/bc/ui5_ui5/sap/z_xup_v0_33_3/thirdparty/customcontrol/spreadsheetimporter/v0_34_1"
+        sap-client: '001'
     - name: ui5-middleware-simpleproxy
       afterMiddleware: compression
-      mountPath: /resources/ui5con24/component
+      mountPath: /sap
       configuration:
-        baseUri: "http://localhost:8080/ui5con24/component"
+        baseUri: "https://sap-new.marian-marianzeis-de.nuve.run/sap"
+    # - name: ui5-middleware-simpleproxy
+    #   afterMiddleware: compression
+    #   mountPath: /resources/ui5con24/component
+    #   configuration:
+    #     baseUri: "http://localhost:4004/ui5con24.app/resources/ui5con24/component"
     - name: ui5-middleware-serveframework
       afterMiddleware: compression

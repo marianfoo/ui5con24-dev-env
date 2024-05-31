@@ -18,17 +18,17 @@
 				"additionalParameters": "allowed"
 			  },
 			  "semanticObject": "ui5con24",
-			  "action": "120",
+			  "action": "abap",
 			  "title": "UI5con 24",
 			  "info": "",
-			  "subTitle": "UI5 1.120",
+			  "subTitle": "UI5 ABAP",
 			  "icon": "sap-icon://course-book"
 			}
 		  }
 		},
 		"dataSources": {
 			"mainService": {
-			  "uri": "/sap/opu/odata/dmo/UI_TRAVEL_U_V2/",
+			  "uri": "sap/opu/odata/dmo/UI_TRAVEL_U_V2/",
 			  "type": "OData",
 			  "settings": {
 				"annotations": [],

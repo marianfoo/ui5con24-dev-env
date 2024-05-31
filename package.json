@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:server": "pnpm --filter @capire/bookshop watch",
+    "start": "pnpm --filter @capire/bookshop watch",
+    "start:server:dev": "pnpm --filter @capire/bookshop watch:dev",
+    "start:server:setup": "pnpm --filter @capire/bookshop setup",
     "start:app": "pnpm --filter ui5con24.app start",
     "build": "rimraf resources mta_archives && mbt build --mtar archive",
     "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
