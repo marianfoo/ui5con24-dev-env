@@ -8,3 +8,4 @@ packages/test
 archive.zip
 dist
 .DS_Store
+.env

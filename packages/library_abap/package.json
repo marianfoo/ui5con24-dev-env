@@ -18,7 +18,7 @@
 		"karma-ci": "karma start karma-ci.conf.js",
 		"karma-ci-cov": "karma start karma-ci-cov.conf.js",
 		"test": "npm run lint && npm run karma-ci-cov",
-		"deploy": "npm run build && fiori deploy --config ui5-deploy.yaml -y"
+		"deploy:abap": "npm run build && fiori deploy --config ui5-deploy.yaml -y"
 	},
 	"devDependencies": {
 		"@sapui5/ts-types-esm": "1.108.30",

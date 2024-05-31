@@ -20,7 +20,7 @@
 		"karma-ci-cov": "karma start karma-ci-cov.conf.js",
 		"test": "npm run lint && npm run karma-ci-cov",
 		"wdi5": "wdio run ./webapp/test/e2e/wdio.conf.ts",
-		"deploy": "npm run build && fiori deploy --config ui5-deploy.yaml -y"
+		"deploy:abap": "npm run build && fiori deploy --config ui5-deploy.yaml -y"
 	},
 	"dependencies": {
 		"ui5con24.lib.abap": "workspace:*",

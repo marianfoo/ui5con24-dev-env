@@ -4,6 +4,8 @@ This repository showcases a advanced development environment for UI5 and CAP pro
 
 ## Setup
 
+To run the local CAP App, you need to run the following commands:
+
 ```bash
 git clone https://github.com/marianfoo/ui5con24-dev-env
 cd ui5con24-dev-env
@@ -13,11 +15,22 @@ pnpm start:server:setup
 pnpm start
 ```
 
+This will start the CAP server and the UI5 App. The related UI5 ABAP App needs a running ABAP Trial 2022 system with UI5 Spreadsheet Component deployed.
+
 ## Deploy
 
 ### Deploy to BTP
 
 ### Deploy to ABAP
+
+For running the app in the ABAP, you need to deploy this local Component and Library and the UI5 Spreadsheet Importer.
+Adapt the yaml files for the deployment to your system.
+
+```bash
+pnpm run deploy:abap:app
+pnpm run deploy:abap:lib
+pnpm run deploy:abap:comp
+```
 
 ## Current used packages
 
