@@ -21,6 +21,13 @@ This will start the CAP server and the UI5 App. The related UI5 ABAP App needs a
 
 ### Deploy to BTP
 
+For running the app in the BTP Workzone, you need to build and deployt the mtar. The mtar will contain all the different packages and deploy it together. Before running the deploy, login to your own BTP account using "cf login".
+
+```bash
+pnpm run build:btp
+pnpm run deploy:btp
+```
+
 ### Deploy to ABAP
 
 For running the app in the ABAP, you need to deploy this local Component and Library and the UI5 Spreadsheet Importer.
