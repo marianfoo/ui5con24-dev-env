@@ -1,0 +1,60 @@
+{
+  "name": "ui5con24.component",
+  "version": "0.0.1",
+  "description": "A UI5 Component",
+  "main": "dist/Component.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "ui5",
+    "custom control",
+    "xlsx",
+    "Excel"
+  ],
+  "author": "marianfoo",
+  "homepage": "",
+  "files": [
+    "dist",
+    "ui5.yaml"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "ui5 build --config=ui5-build.yaml --all --clean-dest --dest dist",
+    "build:abap": "ui5 build --config=ui5-build.yaml --all --clean-dest --dest dist",
+    "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo",
+    "gen-types": "npx @ui5/ts-interface-generator",
+    "setup": "cds deploy --to sqlite:db/bookshop.db",
+    "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml -y",
+    "deploy:abap": "npm run build:abap && fiori deploy --config ui5-deploy-abap.yaml -y"
+  },
+  "dependencies": {
+		"ui5-cc-helloworld": "0.0.2"
+	},
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@prettier/plugin-xml": "^3.4.1",
+    "@sap/ux-ui5-tooling": "1.13.5",
+    "@sapui5/ts-types-esm": "1.124.0",
+    "@types/node": "20.13.0",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "@ui5/cli": "3.10.3",
+    "@ui5/ts-interface-generator": "0.8.2",
+    "babel-preset-transform-ui5": "^7.4.1",
+    "bluebird": "3.7.2",
+    "eslint": "^8.56.0",
+    "js-yaml": "4.1.0",
+    "lint-staged": "^15.2.5",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.0",
+    "prettier-plugin-properties": "^0.3.0",
+    "pretty-quick": "^4.0.0",
+    "replace-in-file": "^7.2.0",
+    "shelljs": "^0.8.5",
+    "typescript": "5.4.5",
+    "ui5-task-zipper": "^3.1.4",
+    "ui5-tooling-modules": "3.6.0",
+    "ui5-tooling-stringreplace": "3.2.3",
+    "ui5-tooling-transpile": "3.4.2"
+  }
+}

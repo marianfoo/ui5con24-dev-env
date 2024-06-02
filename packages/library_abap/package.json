@@ -1,0 +1,41 @@
+{
+	"name": "ui5con24.lib.abap",
+	"version": "1.0.0",
+	"description": "UI5 Library: ui5con24.lib.abap",
+	"author": "„marianfoo“",
+	"license": "Apache-2.0",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"clean": "rimraf dist coverage",
+		"build": "ui5 build --clean-dest",
+		"build:ts-interfaces": "npx @ui5/ts-interface-generator",
+		"start": "ui5 serve -o test-resources/my/bookshop/lib/Example.html",
+		"start:dist": "npm start -- --config ui5-dist.yaml",
+		"testsuite": "ui5 serve -o test-resources/my/bookshop/lib/qunit/testsuite.qunit.html",
+		"ts-typecheck": "tsc --noEmit",
+		"lint": "eslint src test",
+		"karma": "karma start",
+		"karma-ci": "karma start karma-ci.conf.js",
+		"karma-ci-cov": "karma start karma-ci-cov.conf.js",
+		"test": "npm run lint && npm run karma-ci-cov",
+		"deploy:abap": "npm run build && fiori deploy --config ui5-deploy.yaml -y"
+	},
+	"devDependencies": {
+		"@sapui5/ts-types-esm": "1.124.0",
+		"@typescript-eslint/eslint-plugin": "^7.11.0",
+		"@typescript-eslint/parser": "^7.11.0",
+		"@ui5/cli": "^3.10.3",
+		"@ui5/ts-interface-generator": "^0.8.2",
+		"eslint": "^8.56.0",
+		"karma": "^6.4.3",
+		"karma-chrome-launcher": "^3.2.0",
+		"karma-coverage": "^2.2.1",
+		"karma-ui5": "^3.0.4",
+		"karma-ui5-transpile": "^3.4.2",
+		"npm-run-all": "^4.1.5",
+		"rimraf": "^5.0.7",
+		"typescript": "^5.4.5",
+		"ui5-middleware-livereload": "^3.0.3",
+		"ui5-tooling-transpile": "^3.4.2"
+	}
+}

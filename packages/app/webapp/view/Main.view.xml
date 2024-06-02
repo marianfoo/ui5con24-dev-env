@@ -1,0 +1,55 @@
+<mvc:View
+    controllerName="ui5con24.app.controller.Main"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:example="ui5con24.lib"
+    core:require="{
+        formatter: 'ui5con24/app/model/formatter'
+    }">
+
+    <Page
+        title="{i18n>appTitle}"
+        id="page">
+        <content>
+            <VBox>
+                <Label text="Example Libary" class="customLabel"/>
+                <HBox class="customHBox">
+                    <example:Example text="Hello World!"/>
+                </HBox>
+                <Label text="Local Component" class="customLabel"/>
+                <HBox class="customHBox">
+                    <core:ComponentContainer
+                        id="test"
+                        width="100%"
+                        usage="ui5con24component"
+                        propagateModel="true"
+                        async="true"/>
+                </HBox>
+                <Label text="Books Table from CAP" class="customLabel"/>
+                <HBox class="customHBox">
+                    <Table id="table" items="{/Books}">
+                        <columns>
+                            <Column>
+                                <Label text="Title"/>
+                            </Column>
+                            <Column>
+                                <Label text="Author"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{title}"/>
+                                    <Text text="{author_ID}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </HBox>
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>

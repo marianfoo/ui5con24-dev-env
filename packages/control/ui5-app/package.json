@@ -1,0 +1,19 @@
+{
+  "name": "ui5-app",
+  "version": "0.0.1",
+  "description": "UI5 test application using UI5 custom controls via npm",
+  "private": true,
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "ui5-middleware-livereload": "^0.5.2"
+  },
+  "dependencies": {
+    "ui5-cc-ui5con24.cc": "file:../../"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-livereload",
+      "ui5-cc-ui5con24.cc"
+    ]
+  }
+}

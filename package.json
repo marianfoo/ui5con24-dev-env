@@ -4,8 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "pnpm --filter @capire/bookshop watch",
+    "start:server:setup": "pnpm --filter @capire/bookshop setup",
+    "build:btp": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy:btp": "cf deploy mta_archives/archive.mtar --retries 1",
+    "deploy:abap:app": "pnpm --filter ui5con24.app.abap deploy:abap",
+    "deploy:abap:lib": "pnpm --filter ui5con24.lib.abap deploy:abap",
+    "deploy:abap:comp": "pnpm --filter ui5con24.component deploy:abap"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mbt": "^1.2.27",
+    "rimraf": "^5.0.7"
+  }
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>bare bones UI5 (dark 😱)</title>
+  <script id="sap-ui-bootstrap"
+          src="resources/sap-ui-core.js"
+          data-sap-ui-theme="sap_fiori_3_dark"
+          data-sap-ui-libs="sap.ui.core,sap.m"
+          data-sap-ui-oninit="startUp"
+          data-sap-ui-async="true">
+          </script>
+  <script>
+    function startUp() {
+      sap.ui.require([
+        "sap/ui/core/mvc/XMLView",
+        "sap/ui/model/json/JSONModel"
+      ], async (XMLView, JSONModel) => {
+        const View = await XMLView.create({
+          definition: `
+    <mvc:View xmlns:mvc="sap.ui.core.mvc" 
+        xmlns="sap.m" 
+        xmlns:ui5con24.cc="ui5con24.cc"
+        height="100%">
+      <App>
+        <Page showHeader="false">
+          <VBox alignItems="Center"
+                justifyContent="Center"
+                height="100%">
+            <HBox justifyContent="SpaceAround">
+              <ui5con24.cc:Control />
+            </HBox>
+          </VBox>
+        </Page>
+      </App>
+    </mvc:View>`,
+        })
+        View.placeAt("content")
+      })
+    }
+
+  </script>
+</head>
+
+<body class="sapUiBody" id="content"></body>
+
+</html>

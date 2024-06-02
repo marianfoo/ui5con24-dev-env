@@ -1,0 +1,24 @@
+{
+  "name": "ui5-cc-control",
+  "version": "0.0.1",
+  "description": "(add custom control description here)",
+  "scripts": {
+    "test": "jest",
+    "test:manual": "cd test/ui5-app && ui5 serve"
+  },
+  "keywords": [
+    "ui5",
+    "custom control",
+    "notepad control"
+  ],
+  "author": "(you)",
+  "repository": {
+    "type": "git",
+    "url": "you/ui5-cc-ui5con24.cc.git"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@ui5/cli": "^3.10.3",
+    "npm-run-all": "^4.1.5"
+  }
+}

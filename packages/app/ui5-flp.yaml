@@ -1,0 +1,45 @@
+specVersion: "3.0"
+metadata:
+  name: ui5con24.app
+type: application
+framework:
+  name: SAPUI5
+  version: "1.120.14"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: themelib_sap_horizon
+builder:
+  customTasks:
+    - name: ui5-tooling-transpile-task
+      afterTask: replaceVersion
+server:
+  customMiddleware:
+    - name: ui5-tooling-transpile-middleware
+      afterMiddleware: compression
+    # - name: ui5-middleware-livereload
+    #   afterMiddleware: compression
+    - name: ui5-middleware-ui5
+      afterMiddleware: compression
+      configuration:
+        debug: true
+        modules:
+          ui5con24.component:
+            configFile: "ui5-serve.yaml"
+    - name: ui5-tooling-modules-middleware
+      afterMiddleware: compression
+      configuration:
+        addToNamespace: true
+        prependPathMappings: true
+    - name: ui5-middleware-simpleproxy
+      afterMiddleware: compression
+      mountPath: /admin
+      configuration:
+        baseUri: "http://localhost:4004/admin"
+    - name: ui5-middleware-simpleproxy
+      afterMiddleware: compression
+      mountPath: /resources/ui5con24/component
+      configuration:
+        baseUri: "http://localhost:4004/ui5con24/component"
+    - name: ui5-middleware-serveframework
+      afterMiddleware: compression

@@ -1,0 +1,38 @@
+{
+  "generator-ui5-ts-library": {
+    "namespace": "ui5con24.lib.abap",
+    "framework": "SAPUI5",
+    "frameworkVersion": "1.108.30",
+    "flat": true,
+    "author": "„marianfoo“",
+    "initrepo": false,
+    "tstypes": "@sapui5/ts-types-esm",
+    "tstypesVersion": "1.108.30",
+    "metadataOptionsImportLine": "",
+    "metadataOptionsType": "object",
+    "libId": "ui5con24.lib.abap",
+    "libURI": "ui5con24/lib/abap",
+    "libURIFlat": "",
+    "libBasePath": "../../..",
+    "cdnDomain": "ui5.sap.com",
+    "defaultTheme": "sap_horizon",
+    "availableThemes": {
+      "sap_horizon": [
+        "sap_horizon",
+        "sap_horizon_dark",
+        "sap_horizon_hcw",
+        "sap_horizon_hcb"
+      ],
+      "sap_fiori_3": [
+        "sap_fiori_3",
+        "sap_fiori_3_dark",
+        "sap_fiori_3_hcw",
+        "sap_fiori_3_hcb"
+      ]
+    },
+    "gte1_100_0": true,
+    "gte1_119_0": false,
+    "gte2_0_0": false,
+    "setupCompleted": true
+  }
+}

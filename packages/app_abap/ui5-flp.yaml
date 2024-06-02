@@ -1,0 +1,50 @@
+specVersion: "3.0"
+metadata:
+  name: ui5con24.app.abap
+type: application
+framework:
+  name: SAPUI5
+  version: "1.120.14"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: themelib_sap_horizon
+builder:
+  customTasks:
+    - name: ui5-tooling-transpile-task
+      afterTask: replaceVersion
+server:
+  customMiddleware:
+    - name: ui5-tooling-transpile-middleware
+      afterMiddleware: compression
+    # - name: ui5-middleware-livereload
+    #   afterMiddleware: compression
+    - name: ui5-middleware-ui5
+      afterMiddleware: compression
+      configuration:
+        modules:
+          ui5con24.component:
+            configFile: "ui5-serve.yaml"
+    - name: ui5-tooling-modules-middleware
+      afterMiddleware: compression
+      configuration:
+        addToNamespace: true
+        prependPathMappings: true
+    - name: ui5-middleware-simpleproxy
+      afterMiddleware: compression
+      mountPath: /resources/cc/spreadsheetimporter/v0_34_1/
+      configuration:
+        baseUri: "https://sap-new.marian-marianzeis-de.nuve.run/sap/bc/ui5_ui5/sap/z_xup_v0_33_3/thirdparty/customcontrol/spreadsheetimporter/v0_34_1"
+        sap-client: '001'
+    - name: ui5-middleware-simpleproxy
+      afterMiddleware: compression
+      mountPath: /sap
+      configuration:
+        baseUri: "https://sap-new.marian-marianzeis-de.nuve.run/sap"
+    # - name: ui5-middleware-simpleproxy
+    #   afterMiddleware: compression
+    #   mountPath: /resources/ui5con24/component
+    #   configuration:
+    #     baseUri: "http://localhost:4004/ui5con24.app/resources/ui5con24/component"
+    - name: ui5-middleware-serveframework
+      afterMiddleware: compression

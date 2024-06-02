@@ -1,0 +1,27 @@
+specVersion: '2.5'
+metadata:
+  name: cc.spreadsheetimporter.v0_33_4
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        # log: 4
+        target:
+          url: https://sap-new.marian-marianzeis-de.nuve.run
+          client: '001'
+        credentials:
+          username: env:XYZ_USER
+          password: env:XYZ_PASSWORD
+        app:
+          name: Z_ui5con24_app2
+          description: ''
+          package: Z_SHEETUPLOAD
+          transport: A4HK900087
+        exclude:
+          - .*\.ts

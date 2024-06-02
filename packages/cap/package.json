@@ -1,0 +1,74 @@
+{
+  "name": "@capire/bookshop",
+  "version": "1.0.0",
+  "description": "A simple self-contained bookshop service.",
+  "private": true,
+  "devDependencies": {
+    "@cap-js/sqlite": "^1.7.1",
+    "cds-launchpad-plugin": "2.2.0",
+    "cds-plugin-ui5": "^0.9.2",
+    "http-proxy-middleware": "3.0.0",
+    "ui5con24.app": "workspace:*",
+    "ui5con24.app.abap": "workspace:*"
+  },
+  "dependencies": {
+    "@sap/cds": "^7.9.2",
+    "@sap/cds-dk": "^7.9.2",
+    "@sap/cds-hana": "^2.0.0",
+    "@sap/xsenv": "^5.1.0",
+    "@sap/xssec": "3.6.1",
+    "express": "^4.19.2",
+    "passport": "^0.7.0"
+  },
+  "scripts": {
+    "genres": "cds serve test/genres.cds",
+    "start": "cds-serve",
+    "watch": "cds watch",
+    "watch:dev": "NODE_ENV=development cds watch",
+    "build": "cds build --production"
+  },
+  "cds": {
+    "requires": {
+      "[production]": {
+        "auth": "xsuaa",
+        "db": {
+          "kind": "hana"
+        }
+      },
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db/bookshop.db"
+        }
+      },
+      "auth": "dummy"
+    },
+    "cds-plugin-ui5": {
+      "modules": {
+        "ui5con24.app": {
+          "configFile": "ui5-flp.yaml"
+        },
+        "ui5con24.app.abap": {
+          "configFile": "ui5-flp.yaml"
+        }
+      }
+    },
+    "launchpad": {
+      "theme": "sap_horizon",
+      "version": "1.120.14",
+      "modulePaths": {
+        "ui5con24.lib": "./ui5con24.app/resources/ui5con24/lib",
+        "ui5con24.lib.abap": "./ui5con24.app.abap/resources/ui5con24/lib/abap",
+        "ui5con24.component": "./ui5con24.app/ui5con24/component",
+        "ui5-cc-control": "./ui5con24.app.abap/resources/ui5-cc-control",
+        "ui5-cc-helloworld": "./ui5con24.app.abap/resources/ui5-cc-helloworld",
+        "cc.spreadsheetimporter.v0_34_1": "./ui5con24.app.abap/resources/cc/spreadsheetimporter/v0_34_1/",
+        "moment": "./ui5con24.app.abap/resources/moment",
+        "_commonjsHelpers": "./ui5con24.app.abap/resources/_commonjsHelpers"
+      }
+    }
+  },
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
+  }
+}
